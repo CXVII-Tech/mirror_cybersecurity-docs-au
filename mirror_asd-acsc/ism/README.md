@@ -2,7 +2,6 @@
 https://www.cyber.gov.au/business-government/asds-cyber-security-frameworks/ism
 
 ## Table of Contents
-- [ISM September 2025 changes (September 2025) PDF (728KB)](https://www.cyber.gov.au/sites/default/files/2025-09/ISM%20September%202025%20changes%20%28September%202025%29.pdf)
 - [Information security manual (September 2025) PDF (2.17MB)](https://www.cyber.gov.au/sites/default/files/2025-09/Information%20security%20manual%20%28September%202025%29.pdf)
     1. [Using the information security manual](https://www.cyber.gov.au/business-government/asds-cyber-security-frameworks/ism/using-the-information-security-manual)
     2. [Cybersecurity principles](https://www.cyber.gov.au/business-government/asds-cyber-security-frameworks/ism/cybersecurity-principles)
@@ -29,8 +28,9 @@ https://www.cyber.gov.au/business-government/asds-cyber-security-frameworks/ism
     23. [Guidelines for gateways](https://www.cyber.gov.au/business-government/asds-cyber-security-frameworks/ism/cybersecurity-guidelines/guidelines-for-gateways)
     24. [Guidelines for data transfers](https://www.cyber.gov.au/business-government/asds-cyber-security-frameworks/ism/cybersecurity-guidelines/guidelines-for-data-transfers)
     25. [Cybersecurity terminology](https://www.cyber.gov.au/business-government/asds-cyber-security-frameworks/ism/cybersecurity-terminology)
-- [System security plan annex template (September 2025) XLSX (156KB)](https://www.cyber.gov.au/sites/default/files/2025-09/System%20security%20plan%20annex%20template%20%28September%202025%29.xlsx)
-- [Cloud controls matrix template (September 2025) XLSX (199KB)](https://www.cyber.gov.au/sites/default/files/2025-09/Cloud%20controls%20matrix%20template%20%28September%202025%29.xlsx)
-- [Archived ISM releases](https://www.cyber.gov.au/business-government/asds-cyber-security-frameworks/ism/archived-ism-releases)
+- [ISM September 2025 changes (September 2025)](https://www.cyber.gov.au/sites/default/files/2025-09/ISM%20September%202025%20changes%20%28September%202025%29.pdf)
+- [System security plan annex template (September 2025)](https://www.cyber.gov.au/sites/default/files/2025-09/System%20security%20plan%20annex%20template%20%28September%202025%29.xlsx)
+- [Cloud controls matrix template (September 2025)](https://www.cyber.gov.au/sites/default/files/2025-09/Cloud%20controls%20matrix%20template%20%28September%202025%29.xlsx)
 - [ISM OSCAL releases](https://www.cyber.gov.au/business-government/asds-cyber-security-frameworks/ism/ism-oscal-releases)
+    - [GitHub mirror](https://github.com/AustralianCyberSecurityCentre/ism-oscal)
 - [ISM feedback form](https://www.cyber.gov.au/business-government/asds-cyber-security-frameworks/ism/ism-feedback-form)
