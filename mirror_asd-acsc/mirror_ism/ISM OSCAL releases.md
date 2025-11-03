@@ -1,0 +1,31 @@
+# ISM OSCAL releases
+
+The Australian Signals Directorate (ASD) provides the *Information security manual* (ISM) in the [Open Security Controls Assessment Language (OSCAL)](https://pages.nist.gov/OSCAL/), a standardised machine-readable format developed by the United States’ National Institute of Standards and Technology (NIST). ISM OSCAL enables enhanced machine-supported consumption possibilities that can be incorporated into organisations’ governance, risk and compliance (GRC) processes and tooling. For example, improved tooling could include programmatic ingestion of ISM releases into internal systems for tracking in line with organisations’ GRC processes. NIST publishes several [OSCAL learning resources](https://pages.nist.gov/OSCAL/learn/) to help organisations understand the concepts behind OSCAL and its use.
+
+The ISM is provided as an [OSCAL catalog](https://pages.nist.gov/OSCAL/concepts/layer/control/catalog/) with the use of [OSCAL props](https://pages.nist.gov/OSCAL/learn/tutorials/general/extension/#props) for unique ISM attributes. ASD also provides illustrative [OSCAL profiles](https://pages.nist.gov/OSCAL/concepts/layer/control/profile/) and [OSCAL resolved profile catalogs](https://pages.nist.gov/OSCAL/concepts/processing/profile-resolution/) for each ISM control’s applicability (non-classified, OFFICIAL: Sensitive, PROTECTED, SECRET, TOP SECRET), as well as for [Essential Eight](../Essential%20Eight%2029c2d601130380aea238d61267ffb46e.md) Maturity Level One (ML1), Maturity Level Two (ML2) and Maturity Level Three (ML3). Importantly, to enable greater flexibility for consumers, and to align with the ISM’s non-machine-readable documents, the information used to inform these profiles are also included in the source ISM catalog.
+
+ASD welcomes feedback regarding ISM OSCAL. If you would like to provide any feedback or insights about your usage, or have enquiries regarding ISM OSCAL, please complete the [ISM Feedback Form](https://www.cyber.gov.au/resources-business-and-government/essential-cyber-security/ism/ism-feedback-form). Feedback pertaining to the broader use of OSCAL (including the OSCAL specification) should be directed to the [OSCAL community or NIST’s OSCAL team](https://pages.nist.gov/OSCAL/contact/).
+
+- [A GitHub mirror of ISM OSCAL documents now available for an improved automated data ingestion experience.](https://github.com/AustralianCyberSecurityCentre/ism-oscal)
+- [ISM OSCAL v2024.10.8 - based on June 2025 Information Security Manual (ISM) and OSCAL version 1.1.2. A patch release that supersedes v2025.09.15.](https://www.cyber.gov.au/ism/oscal/v2025.10.8)
+- [ISM OSCAL v2024.09.15 - based on June 2025 Information Security Manual (ISM) and OSCAL version 1.1.2. A patch release that supersedes v2025.09.10.](https://www.cyber.gov.au/ism/oscal/v2025.09.15)
+- [ISM OSCAL v2024.09.10 - based on June 2025 Information Security Manual (ISM) and OSCAL version 1.1.2.](https://www.cyber.gov.au/ism/oscal/v2025.09.10)
+- [ISM OSCAL v2024.07.16 - based on June 2025 Information Security Manual (ISM) and OSCAL version 1.1.2.](https://www.cyber.gov.au/ism/oscal/v2025.07.16)
+- [ISM OSCAL v2024.03.31 - based on March 2025 Information Security Manual (ISM) and OSCAL version 1.1.2.](https://www.cyber.gov.au/ism/oscal/v2025.03.31)
+- [ISM OSCAL v2024.12.19 - based on December 2024 Information Security Manual (ISM) and OSCAL version 1.1.2.](https://www.cyber.gov.au/ism/oscal/v2024.12.19)
+- [ISM OSCAL v2024.10.4 - based on the October patch release of the September 2024 Information Security Manual (ISM) and OSCAL version 1.1.2. A patch release that supersedes v2024.09.26.](https://www.cyber.gov.au/ism/oscal/v2024.10.4)
+- [ISM OSCAL v2024.09.26 - based on September 2024 Information Security Manual (ISM) and OSCAL version 1.1.2.](https://www.cyber.gov.au/ism/oscal/v2024.09.26)
+- [ISM OSCAL v2024.06.18 - based on June 2024 Information Security Manual (ISM) and OSCAL version 1.1.2.](https://www.cyber.gov.au/ism/oscal/v2024.06.18)
+- [ISM OSCAL v2024.03.12 - based on March 2024 Information Security Manual (ISM) and OSCAL version 1.1.2.](https://www.cyber.gov.au/ism/oscal/v2024.03.12)
+- [ISM OSCAL v2024.03.5 - based on March 2024 Information Security Manual (ISM) and OSCAL version 1.1.1.](https://www.cyber.gov.au/ism/oscal/v2024.03.5)
+- [ISM OSCAL v2023.12.1 - based on December 2023 Information Security Manual (ISM) and OSCAL version 1.1.1.](https://www.cyber.gov.au/ism/oscal/v2023.12.1)
+- [ISM OSCAL v2023.09.25 - based on September 2023 Information Security Manual (ISM) and OSCAL version 1.1.1.](https://www.cyber.gov.au/ism/oscal/v2023.09.25)
+- [ISM OSCAL v2023.09.21 - based on September 2023 Information Security Manual (ISM) and OSCAL version 1.1.0.](https://www.cyber.gov.au/ism/oscal/v2023.09.21)
+- [ISM OSCAL v2023.08.3 - based on June 2023 Information Security Manual (ISM) and OSCAL version 1.1.0.](https://www.cyber.gov.au/ism/oscal/v2023.08.3)
+- [ISM OSCAL v2023.06.29 - based on June 2023 Information Security Manual (ISM) and OSCAL version 1.0.4.](https://www.cyber.gov.au/ism/oscal/v2023.06.29)
+- [ISM OSCAL v2023.04.12 - based on March 2023 Information Security Manual (ISM) and OSCAL version 1.0.4. A release that supersedes v2023.03.5.](https://www.cyber.gov.au/ism/oscal/v2023.04.12)
+- [ISM OSCAL v2023.03.5 - based on March 2023 Information Security Manual (ISM) and OSCAL version 1.0.4. A patch release that supersedes v2023.03.3.](https://www.cyber.gov.au/ism/oscal/v2023.03.5)
+- [ISM OSCAL v2023.03.3 - based on March 2023 Information Security Manual (ISM) and OSCAL version 1.0.4.](https://www.cyber.gov.au/ism/oscal/v2023.03.3)
+- [ISM OSCAL v2022.12.1 - based on December 2022 Information Security Manual (ISM) and OSCAL version 1.0.4.](https://www.cyber.gov.au/ism/oscal/v2022.12.1)
+- [ISM OSCAL v2022.09.15 - based on September 2022 Information Security Manual (ISM) and OSCAL version 1.0.4.](https://www.cyber.gov.au/ism/oscal/v2022.09.15)
+- [ISM OSCAL v2022.09.14 - based on June 2022 Information Security Manual (ISM) and OSCAL version 1.0.4.](https://www.cyber.gov.au/ism/oscal/v2022.09.14)
