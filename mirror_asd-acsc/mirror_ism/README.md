@@ -3,7 +3,7 @@ https://www.cyber.gov.au/business-government/asds-cyber-security-frameworks/ism
 
 ## Table of Contents
 
-- [Information security manual (September 2025)]("00 ISM - Information security manual (September 2025).md")
+- [Information security manual (September 2025)](00%20ISM%20-%20Information%20security%20manual%20(September%202025).md)
     1. [Using the information security manual](https://www.cyber.gov.au/business-government/asds-cyber-security-frameworks/ism/using-the-information-security-manual)
     2. [Cybersecurity principles](https://www.cyber.gov.au/business-government/asds-cyber-security-frameworks/ism/cybersecurity-principles)
     3. [Guidelines for cybersecurity roles](https://www.cyber.gov.au/business-government/asds-cyber-security-frameworks/ism/cybersecurity-guidelines/guidelines-for-cybersecurity-roles)
