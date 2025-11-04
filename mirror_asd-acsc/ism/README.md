@@ -2,6 +2,7 @@
 https://www.cyber.gov.au/business-government/asds-cyber-security-frameworks/ism
 
 ## Table of Contents
+
 - [Information security manual (September 2025) PDF (2.17MB)](https://www.cyber.gov.au/sites/default/files/2025-09/Information%20security%20manual%20%28September%202025%29.pdf)
     1. [Using the information security manual](https://www.cyber.gov.au/business-government/asds-cyber-security-frameworks/ism/using-the-information-security-manual)
     2. [Cybersecurity principles](https://www.cyber.gov.au/business-government/asds-cyber-security-frameworks/ism/cybersecurity-principles)
@@ -34,3 +35,23 @@ https://www.cyber.gov.au/business-government/asds-cyber-security-frameworks/ism
 - [ISM OSCAL releases](https://www.cyber.gov.au/business-government/asds-cyber-security-frameworks/ism/ism-oscal-releases)
     - [GitHub mirror](https://github.com/AustralianCyberSecurityCentre/ism-oscal)
 - [ISM feedback form](https://www.cyber.gov.au/business-government/asds-cyber-security-frameworks/ism/ism-feedback-form)
+
+## Disclaimer
+
+The material in this guide is of a general nature and should not be regarded as legal advice or relied on for assistance in any particular circumstance or emergency situation. In any important matter, you should seek appropriate independent professional advice in relation to your own circumstances.
+
+The Commonwealth accepts no responsibility or liability for any damage, loss or expense incurred as a result of the reliance on information contained in this guide.
+
+## Copyright
+
+© Commonwealth of Australia 2025
+
+With the exception of the Coat of Arms and where otherwise stated, all material presented in this publication is provided under a [Creative Commons Attribution 4.0 International license](https://creativecommons.org/licenses/by/4.0/). 
+
+For the avoidance of doubt, this means this license only applies to material as set out in this document.
+
+The details of the relevant license conditions are available on the Creative Commons website as is [the full legal code for the CC BY 4.0 license](https://creativecommons.org/licenses/by/4.0/legalcode.en).
+
+### Use of the Coat of Arms 
+
+The terms under which the Coat of Arms can be used are detailed on the [Department of the Prime Minister and Cabinet website](https://www.pmc.gov.au/resources/commonwealth-coat-arms-information-and-guidelines).
