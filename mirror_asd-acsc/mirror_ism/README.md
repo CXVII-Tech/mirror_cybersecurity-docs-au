@@ -3,7 +3,7 @@ https://www.cyber.gov.au/business-government/asds-cyber-security-frameworks/ism
 
 ## Table of Contents
 
-- [Information security manual (September 2025) PDF (2.17MB)](https://www.cyber.gov.au/sites/default/files/2025-09/Information%20security%20manual%20%28September%202025%29.pdf)
+- [Information security manual (September 2025)]("00 ISM - Information security manual (September 2025).md")
     1. [Using the information security manual](https://www.cyber.gov.au/business-government/asds-cyber-security-frameworks/ism/using-the-information-security-manual)
     2. [Cybersecurity principles](https://www.cyber.gov.au/business-government/asds-cyber-security-frameworks/ism/cybersecurity-principles)
     3. [Guidelines for cybersecurity roles](https://www.cyber.gov.au/business-government/asds-cyber-security-frameworks/ism/cybersecurity-guidelines/guidelines-for-cybersecurity-roles)
@@ -34,7 +34,6 @@ https://www.cyber.gov.au/business-government/asds-cyber-security-frameworks/ism
 - [Cloud controls matrix template (September 2025)](https://www.cyber.gov.au/sites/default/files/2025-09/Cloud%20controls%20matrix%20template%20%28September%202025%29.xlsx)
 - [ISM OSCAL releases](https://www.cyber.gov.au/business-government/asds-cyber-security-frameworks/ism/ism-oscal-releases)
     - [GitHub mirror](https://github.com/AustralianCyberSecurityCentre/ism-oscal)
-- [ISM feedback form](https://www.cyber.gov.au/business-government/asds-cyber-security-frameworks/ism/ism-feedback-form)
 
 ## Disclaimer
 
