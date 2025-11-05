@@ -21,7 +21,11 @@
     {
       "ism_control": "ISM-0123",
       "description": "Cybersecurity incidents are reported to the chief information security officer, or one of their delegates, as soon as possible after they occur or are discovered.",
-      "maturity_applicability": { "level1": false, "level2": true, "level3": true },
+      "maturity_applicability": {
+        "level1": false,
+        "level2": true,
+        "level3": true
+      },
       "strategies": [
         "multi_factor_authentication",
         "restrict_administrative_privileges",
@@ -32,7 +36,11 @@
     {
       "ism_control": "ISM-0140",
       "description": "Cybersecurity incidents are reported to ASD as soon as possible after they occur or are discovered.",
-      "maturity_applicability": { "level1": false, "level2": true, "level3": true },
+      "maturity_applicability": {
+        "level1": false,
+        "level2": true,
+        "level3": true
+      },
       "strategies": [
         "multi_factor_authentication",
         "restrict_administrative_privileges",
@@ -43,7 +51,11 @@
     {
       "ism_control": "ISM-1819",
       "description": "Following the identification of a cybersecurity incident, the cybersecurity incident response plan is enacted.",
-      "maturity_applicability": { "level1": false, "level2": true, "level3": true },
+      "maturity_applicability": {
+        "level1": false,
+        "level2": true,
+        "level3": true
+      },
       "strategies": [
         "multi_factor_authentication",
         "restrict_administrative_privileges",
@@ -53,716 +65,1430 @@
     },
     {
       "ism_control": "ISM-1507",
-      "description": "Requests for privileged access to systems and their resources are validated when first requested.",
-      "maturity_applicability": { "level1": true, "level2": true, "level3": true },
-      "strategies": ["restrict_administrative_privileges"]
+      "description": "Requests for privileged access to systems, applications and data repositories are validated when first requested.",
+      "maturity_applicability": {
+        "level1": true,
+        "level2": true,
+        "level3": true
+      },
+      "strategies": [
+        "restrict_administrative_privileges"
+      ]
     },
     {
       "ism_control": "ISM-1508",
-      "description": "Privileged access to systems and their resources is limited to only what is required for users and services to undertake their duties.",
-      "maturity_applicability": { "level1": false, "level2": false, "level3": true },
-      "strategies": ["restrict_administrative_privileges"]
+      "description": "Privileged access to systems, applications and data repositories is limited to only what is required for users and services to undertake their duties.",
+      "maturity_applicability": {
+        "level1": false,
+        "level2": false,
+        "level3": true
+      },
+      "strategies": [
+        "restrict_administrative_privileges"
+      ]
     },
     {
       "ism_control": "ISM-1175",
       "description": "Privileged user accounts (excluding those explicitly authorised to access online services) are prevented from accessing the internet, email and web services.",
-      "maturity_applicability": { "level1": true, "level2": true, "level3": true },
-      "strategies": ["restrict_administrative_privileges"]
+      "maturity_applicability": {
+        "level1": true,
+        "level2": true,
+        "level3": true
+      },
+      "strategies": [
+        "restrict_administrative_privileges"
+      ]
     },
     {
       "ism_control": "ISM-1883",
       "description": "Privileged user accounts explicitly authorised to access online services are strictly limited to only what is required for users and services to undertake their duties.",
-      "maturity_applicability": { "level1": true, "level2": true, "level3": true },
-      "strategies": ["restrict_administrative_privileges"]
+      "maturity_applicability": {
+        "level1": true,
+        "level2": true,
+        "level3": true
+      },
+      "strategies": [
+        "restrict_administrative_privileges"
+      ]
     },
     {
       "ism_control": "ISM-1649",
       "description": "Just-in-time administration is used for the administration of systems and their resources.",
-      "maturity_applicability": { "level1": false, "level2": false, "level3": true },
-      "strategies": ["restrict_administrative_privileges"]
+      "maturity_applicability": {
+        "level1": false,
+        "level2": false,
+        "level3": true
+      },
+      "strategies": [
+        "restrict_administrative_privileges"
+      ]
     },
     {
       "ism_control": "ISM-0445",
       "description": "Privileged users are assigned a dedicated privileged user account to be used solely for duties requiring privileged access.",
-      "maturity_applicability": { "level1": true, "level2": true, "level3": true },
-      "strategies": ["restrict_administrative_privileges"]
+      "maturity_applicability": {
+        "level1": true,
+        "level2": true,
+        "level3": true
+      },
+      "strategies": [
+        "restrict_administrative_privileges"
+      ]
     },
     {
       "ism_control": "ISM-1509",
       "description": "Privileged access events are centrally logged.",
-      "maturity_applicability": { "level1": false, "level2": true, "level3": true },
-      "strategies": ["restrict_administrative_privileges"]
+      "maturity_applicability": {
+        "level1": false,
+        "level2": true,
+        "level3": true
+      },
+      "strategies": [
+        "restrict_administrative_privileges"
+      ]
     },
     {
       "ism_control": "ISM-1650",
       "description": "Privileged user account and security group management events are centrally logged.",
-      "maturity_applicability": { "level1": false, "level2": true, "level3": true },
-      "strategies": ["restrict_administrative_privileges"]
+      "maturity_applicability": {
+        "level1": false,
+        "level2": true,
+        "level3": true
+      },
+      "strategies": [
+        "restrict_administrative_privileges"
+      ]
     },
     {
       "ism_control": "ISM-1648",
-      "description": "Privileged access to systems and their resources are disabled after 45 days of inactivity.",
-      "maturity_applicability": { "level1": false, "level2": true, "level3": true },
-      "strategies": ["restrict_administrative_privileges"]
+      "description": "Privileged access to systems and applications is disabled after 45 days of inactivity.",
+      "maturity_applicability": {
+        "level1": false,
+        "level2": true,
+        "level3": true
+      },
+      "strategies": [
+        "restrict_administrative_privileges"
+      ]
     },
     {
       "ism_control": "ISM-1647",
-      "description": "Privileged access to systems and their resources are disabled after 12 months unless revalidated.",
-      "maturity_applicability": { "level1": false, "level2": true, "level3": true },
-      "strategies": ["restrict_administrative_privileges"]
+      "description": "Privileged access to systems, applications and data repositories is disabled after 12 months unless revalidated.",
+      "maturity_applicability": {
+        "level1": false,
+        "level2": true,
+        "level3": true
+      },
+      "strategies": [
+        "restrict_administrative_privileges"
+      ]
     },
     {
       "ism_control": "ISM-1407",
       "description": "The latest release, or the previous release, of operating systems are used.",
-      "maturity_applicability": { "level1": false, "level2": false, "level3": true },
-      "strategies": ["patch_operating_systems"]
+      "maturity_applicability": {
+        "level1": false,
+        "level2": false,
+        "level3": true
+      },
+      "strategies": [
+        "patch_operating_systems"
+      ]
     },
     {
       "ism_control": "ISM-1654",
       "description": "Internet Explorer 11 is disabled or removed.",
-      "maturity_applicability": { "level1": true, "level2": true, "level3": true },
-      "strategies": ["user_application_hardening"]
+      "maturity_applicability": {
+        "level1": true,
+        "level2": true,
+        "level3": true
+      },
+      "strategies": [
+        "user_application_hardening"
+      ]
     },
     {
       "ism_control": "ISM-1655",
       "description": ".NET Framework 3.5 (includes .NET 2.0 and 3.0) is disabled or removed.",
-      "maturity_applicability": { "level1": false, "level2": false, "level3": true },
-      "strategies": ["user_application_hardening"]
+      "maturity_applicability": {
+        "level1": false,
+        "level2": false,
+        "level3": true
+      },
+      "strategies": [
+        "user_application_hardening"
+      ]
     },
     {
       "ism_control": "ISM-0843",
       "description": "Application control is implemented on workstations.",
-      "maturity_applicability": { "level1": true, "level2": true, "level3": true },
-      "strategies": ["application_control"]
+      "maturity_applicability": {
+        "level1": true,
+        "level2": true,
+        "level3": true
+      },
+      "strategies": [
+        "application_control"
+      ]
     },
     {
       "ism_control": "ISM-1490",
       "description": "Application control is implemented on internet-facing servers.",
-      "maturity_applicability": { "level1": false, "level2": true, "level3": true },
-      "strategies": ["application_control"]
+      "maturity_applicability": {
+        "level1": false,
+        "level2": true,
+        "level3": true
+      },
+      "strategies": [
+        "application_control"
+      ]
     },
     {
       "ism_control": "ISM-1656",
       "description": "Application control is implemented on non-internet-facing servers.",
-      "maturity_applicability": { "level1": false, "level2": false, "level3": true },
-      "strategies": ["application_control"]
+      "maturity_applicability": {
+        "level1": false,
+        "level2": false,
+        "level3": true
+      },
+      "strategies": [
+        "application_control"
+      ]
     },
     {
       "ism_control": "ISM-1870",
       "description": "Application control is applied to user profiles and temporary folders used by operating systems, web browsers and email clients.",
-      "maturity_applicability": { "level1": true, "level2": true, "level3": true },
-      "strategies": ["application_control"]
+      "maturity_applicability": {
+        "level1": true,
+        "level2": true,
+        "level3": true
+      },
+      "strategies": [
+        "application_control"
+      ]
     },
     {
       "ism_control": "ISM-1871",
       "description": "Application control is applied to all locations other than user profiles and temporary folders used by operating systems, web browsers and email clients.",
-      "maturity_applicability": { "level1": false, "level2": true, "level3": true },
-      "strategies": ["application_control"]
+      "maturity_applicability": {
+        "level1": false,
+        "level2": true,
+        "level3": true
+      },
+      "strategies": [
+        "application_control"
+      ]
     },
     {
       "ism_control": "ISM-1657",
       "description": "Application control restricts the execution of executables, software libraries, scripts, installers, compiled HTML, HTML applications and control panel applets to an organisation-approved set.",
-      "maturity_applicability": { "level1": true, "level2": true, "level3": true },
-      "strategies": ["application_control"]
+      "maturity_applicability": {
+        "level1": true,
+        "level2": true,
+        "level3": true
+      },
+      "strategies": [
+        "application_control"
+      ]
     },
     {
       "ism_control": "ISM-1658",
       "description": "Application control restricts the execution of drivers to an organisation-approved set.",
-      "maturity_applicability": { "level1": false, "level2": false, "level3": true },
-      "strategies": ["application_control"]
+      "maturity_applicability": {
+        "level1": false,
+        "level2": false,
+        "level3": true
+      },
+      "strategies": [
+        "application_control"
+      ]
     },
     {
       "ism_control": "ISM-1544",
-      "description": "Microsoft’s recommended application blocklist is implemented.",
-      "maturity_applicability": { "level1": false, "level2": true, "level3": true },
-      "strategies": ["application_control"]
+      "description": "Microsoft's recommended application blocklist is implemented.",
+      "maturity_applicability": {
+        "level1": false,
+        "level2": true,
+        "level3": true
+      },
+      "strategies": [
+        "application_control"
+      ]
     },
     {
       "ism_control": "ISM-1659",
-      "description": "Microsoft’s vulnerable driver blocklist is implemented.",
-      "maturity_applicability": { "level1": false, "level2": false, "level3": true },
-      "strategies": ["application_control"]
+      "description": "Microsoft's vulnerable driver blocklist is implemented.",
+      "maturity_applicability": {
+        "level1": false,
+        "level2": false,
+        "level3": true
+      },
+      "strategies": [
+        "application_control"
+      ]
     },
     {
       "ism_control": "ISM-1582",
       "description": "Application control rulesets are validated on an annual or more frequent basis.",
-      "maturity_applicability": { "level1": false, "level2": true, "level3": true },
-      "strategies": ["application_control"]
+      "maturity_applicability": {
+        "level1": false,
+        "level2": true,
+        "level3": true
+      },
+      "strategies": [
+        "application_control"
+      ]
     },
     {
       "ism_control": "ISM-1660",
       "description": "Allowed and blocked application control events are centrally logged.",
-      "maturity_applicability": { "level1": false, "level2": true, "level3": true },
-      "strategies": ["application_control"]
+      "maturity_applicability": {
+        "level1": false,
+        "level2": true,
+        "level3": true
+      },
+      "strategies": [
+        "application_control"
+      ]
     },
     {
       "ism_control": "ISM-1889",
       "description": "Command line process creation events are centrally logged.",
-      "maturity_applicability": { "level1": false, "level2": true, "level3": true },
-      "strategies": ["user_application_hardening"]
+      "maturity_applicability": {
+        "level1": false,
+        "level2": true,
+        "level3": true
+      },
+      "strategies": [
+        "user_application_hardening"
+      ]
     },
     {
       "ism_control": "ISM-1621",
       "description": "Windows PowerShell 2.0 is disabled or removed.",
-      "maturity_applicability": { "level1": false, "level2": false, "level3": true },
-      "strategies": ["user_application_hardening"]
+      "maturity_applicability": {
+        "level1": false,
+        "level2": false,
+        "level3": true
+      },
+      "strategies": [
+        "user_application_hardening"
+      ]
     },
     {
       "ism_control": "ISM-1622",
       "description": "PowerShell is configured to use Constrained Language Mode.",
-      "maturity_applicability": { "level1": false, "level2": false, "level3": true },
-      "strategies": ["user_application_hardening"]
+      "maturity_applicability": {
+        "level1": false,
+        "level2": false,
+        "level3": true
+      },
+      "strategies": [
+        "user_application_hardening"
+      ]
     },
     {
       "ism_control": "ISM-1623",
       "description": "PowerShell module logging, script block logging and transcription events are centrally logged.",
-      "maturity_applicability": { "level1": false, "level2": true, "level3": true },
-      "strategies": ["user_application_hardening"]
+      "maturity_applicability": {
+        "level1": false,
+        "level2": true,
+        "level3": true
+      },
+      "strategies": [
+        "user_application_hardening"
+      ]
     },
     {
       "ism_control": "ISM-1667",
       "description": "Microsoft Office is blocked from creating child processes.",
-      "maturity_applicability": { "level1": false, "level2": true, "level3": true },
-      "strategies": ["user_application_hardening"]
+      "maturity_applicability": {
+        "level1": false,
+        "level2": true,
+        "level3": true
+      },
+      "strategies": [
+        "user_application_hardening"
+      ]
     },
     {
       "ism_control": "ISM-1668",
       "description": "Microsoft Office is blocked from creating executable content.",
-      "maturity_applicability": { "level1": false, "level2": true, "level3": true },
-      "strategies": ["user_application_hardening"]
+      "maturity_applicability": {
+        "level1": false,
+        "level2": true,
+        "level3": true
+      },
+      "strategies": [
+        "user_application_hardening"
+      ]
     },
     {
       "ism_control": "ISM-1669",
       "description": "Microsoft Office is blocked from injecting code into other processes.",
-      "maturity_applicability": { "level1": false, "level2": true, "level3": true },
-      "strategies": ["user_application_hardening"]
+      "maturity_applicability": {
+        "level1": false,
+        "level2": true,
+        "level3": true
+      },
+      "strategies": [
+        "user_application_hardening"
+      ]
     },
     {
       "ism_control": "ISM-1542",
       "description": "Microsoft Office is configured to prevent activation of Object Linking and Embedding packages.",
-      "maturity_applicability": { "level1": false, "level2": true, "level3": true },
-      "strategies": ["user_application_hardening"]
+      "maturity_applicability": {
+        "level1": false,
+        "level2": true,
+        "level3": true
+      },
+      "strategies": [
+        "user_application_hardening"
+      ]
     },
     {
       "ism_control": "ISM-1859",
       "description": "Office productivity suites are hardened using ASD and vendor hardening guidance, with the most restrictive guidance taking precedence when conflicts occur.",
-      "maturity_applicability": { "level1": false, "level2": true, "level3": true },
-      "strategies": ["user_application_hardening"]
+      "maturity_applicability": {
+        "level1": false,
+        "level2": true,
+        "level3": true
+      },
+      "strategies": [
+        "user_application_hardening"
+      ]
     },
     {
       "ism_control": "ISM-1823",
       "description": "Office productivity suite security settings cannot be changed by users.",
-      "maturity_applicability": { "level1": false, "level2": true, "level3": true },
-      "strategies": ["user_application_hardening"]
+      "maturity_applicability": {
+        "level1": false,
+        "level2": true,
+        "level3": true
+      },
+      "strategies": [
+        "user_application_hardening"
+      ]
     },
     {
       "ism_control": "ISM-1486",
       "description": "Web browsers do not process Java from the internet.",
-      "maturity_applicability": { "level1": true, "level2": true, "level3": true },
-      "strategies": ["user_application_hardening"]
+      "maturity_applicability": {
+        "level1": true,
+        "level2": true,
+        "level3": true
+      },
+      "strategies": [
+        "user_application_hardening"
+      ]
     },
     {
       "ism_control": "ISM-1485",
       "description": "Web browsers do not process web advertisements from the internet.",
-      "maturity_applicability": { "level1": true, "level2": true, "level3": true },
-      "strategies": ["user_application_hardening"]
+      "maturity_applicability": {
+        "level1": true,
+        "level2": true,
+        "level3": true
+      },
+      "strategies": [
+        "user_application_hardening"
+      ]
     },
     {
       "ism_control": "ISM-1412",
       "description": "Web browsers are hardened using ASD and vendor hardening guidance, with the most restrictive guidance taking precedence when conflicts occur.",
-      "maturity_applicability": { "level1": false, "level2": true, "level3": true },
-      "strategies": ["user_application_hardening"]
+      "maturity_applicability": {
+        "level1": false,
+        "level2": true,
+        "level3": true
+      },
+      "strategies": [
+        "user_application_hardening"
+      ]
     },
     {
       "ism_control": "ISM-1585",
       "description": "Web browser security settings cannot be changed by users.",
-      "maturity_applicability": { "level1": true, "level2": true, "level3": true },
-      "strategies": ["user_application_hardening"]
+      "maturity_applicability": {
+        "level1": true,
+        "level2": true,
+        "level3": true
+      },
+      "strategies": [
+        "user_application_hardening"
+      ]
     },
     {
       "ism_control": "ISM-1670",
-      "description": "PDF applications are blocked from creating child processes.",
-      "maturity_applicability": { "level1": false, "level2": true, "level3": true },
-      "strategies": ["user_application_hardening"]
+      "description": "PDF software is blocked from creating child processes.",
+      "maturity_applicability": {
+        "level1": false,
+        "level2": true,
+        "level3": true
+      },
+      "strategies": [
+        "user_application_hardening"
+      ]
     },
     {
       "ism_control": "ISM-1860",
-      "description": "PDF applications are hardened using ASD and vendor hardening guidance, with the most restrictive guidance taking precedence when conflicts occur.",
-      "maturity_applicability": { "level1": false, "level2": true, "level3": true },
-      "strategies": ["user_application_hardening"]
+      "description": "PDF software is hardened using ASD and vendor hardening guidance, with the most restrictive guidance taking precedence when conflicts occur.",
+      "maturity_applicability": {
+        "level1": false,
+        "level2": true,
+        "level3": true
+      },
+      "strategies": [
+        "user_application_hardening"
+      ]
     },
     {
       "ism_control": "ISM-1824",
-      "description": "PDF application security settings cannot be changed by users.",
-      "maturity_applicability": { "level1": false, "level2": true, "level3": true },
-      "strategies": ["user_application_hardening"]
+      "description": "PDF software security settings cannot be changed by users.",
+      "maturity_applicability": {
+        "level1": false,
+        "level2": true,
+        "level3": true
+      },
+      "strategies": [
+        "user_application_hardening"
+      ]
     },
     {
       "ism_control": "ISM-1671",
       "description": "Microsoft Office macros are disabled for users that do not have a demonstrated business requirement.",
-      "maturity_applicability": { "level1": true, "level2": true, "level3": true },
-      "strategies": ["restrict_microsoft_office_macros"]
+      "maturity_applicability": {
+        "level1": true,
+        "level2": true,
+        "level3": true
+      },
+      "strategies": [
+        "restrict_microsoft_office_macros"
+      ]
     },
     {
       "ism_control": "ISM-1488",
       "description": "Microsoft Office macros in files originating from the internet are blocked.",
-      "maturity_applicability": { "level1": true, "level2": true, "level3": true },
-      "strategies": ["restrict_microsoft_office_macros"]
+      "maturity_applicability": {
+        "level1": true,
+        "level2": true,
+        "level3": true
+      },
+      "strategies": [
+        "restrict_microsoft_office_macros"
+      ]
     },
     {
       "ism_control": "ISM-1672",
       "description": "Microsoft Office macro antivirus scanning is enabled.",
-      "maturity_applicability": { "level1": true, "level2": true, "level3": true },
-      "strategies": ["restrict_microsoft_office_macros"]
+      "maturity_applicability": {
+        "level1": true,
+        "level2": true,
+        "level3": true
+      },
+      "strategies": [
+        "restrict_microsoft_office_macros"
+      ]
     },
     {
       "ism_control": "ISM-1673",
       "description": "Microsoft Office macros are blocked from making Win32 API calls.",
-      "maturity_applicability": { "level1": false, "level2": true, "level3": true },
-      "strategies": ["restrict_microsoft_office_macros"]
+      "maturity_applicability": {
+        "level1": false,
+        "level2": true,
+        "level3": true
+      },
+      "strategies": [
+        "restrict_microsoft_office_macros"
+      ]
     },
     {
       "ism_control": "ISM-1674",
       "description": "Only Microsoft Office macros running from within a sandboxed environment, a Trusted Location or that are digitally signed by a trusted publisher are allowed to execute.",
-      "maturity_applicability": { "level1": false, "level2": false, "level3": true },
-      "strategies": ["restrict_microsoft_office_macros"]
+      "maturity_applicability": {
+        "level1": false,
+        "level2": false,
+        "level3": true
+      },
+      "strategies": [
+        "restrict_microsoft_office_macros"
+      ]
     },
     {
       "ism_control": "ISM-1890",
       "description": "Microsoft Office macros are checked to ensure they are free of malicious code before being digitally signed or placed within Trusted Locations.",
-      "maturity_applicability": { "level1": false, "level2": false, "level3": true },
-      "strategies": ["restrict_microsoft_office_macros"]
+      "maturity_applicability": {
+        "level1": false,
+        "level2": false,
+        "level3": true
+      },
+      "strategies": [
+        "restrict_microsoft_office_macros"
+      ]
     },
     {
       "ism_control": "ISM-1487",
       "description": "Only privileged users responsible for checking that Microsoft Office macros are free of malicious code can write to and modify content within Trusted Locations.",
-      "maturity_applicability": { "level1": false, "level2": false, "level3": true },
-      "strategies": ["restrict_microsoft_office_macros"]
+      "maturity_applicability": {
+        "level1": false,
+        "level2": false,
+        "level3": true
+      },
+      "strategies": [
+        "restrict_microsoft_office_macros"
+      ]
     },
     {
       "ism_control": "ISM-1675",
       "description": "Microsoft Office macros digitally signed by an untrusted publisher cannot be enabled via the Message Bar or Backstage View.",
-      "maturity_applicability": { "level1": false, "level2": false, "level3": true },
-      "strategies": ["restrict_microsoft_office_macros"]
+      "maturity_applicability": {
+        "level1": false,
+        "level2": false,
+        "level3": true
+      },
+      "strategies": [
+        "restrict_microsoft_office_macros"
+      ]
     },
     {
       "ism_control": "ISM-1891",
       "description": "Microsoft Office macros digitally signed by signatures other than V3 signatures cannot be enabled via the Message Bar or Backstage View.",
-      "maturity_applicability": { "level1": false, "level2": false, "level3": true },
-      "strategies": ["restrict_microsoft_office_macros"]
+      "maturity_applicability": {
+        "level1": false,
+        "level2": false,
+        "level3": true
+      },
+      "strategies": [
+        "restrict_microsoft_office_macros"
+      ]
     },
     {
       "ism_control": "ISM-1676",
-      "description": "Microsoft Office’s list of trusted publishers is validated on an annual or more frequent basis.",
-      "maturity_applicability": { "level1": false, "level2": false, "level3": true },
-      "strategies": ["restrict_microsoft_office_macros"]
+      "description": "Microsoft Office's list of trusted publishers is validated on an annual or more frequent basis.",
+      "maturity_applicability": {
+        "level1": false,
+        "level2": false,
+        "level3": true
+      },
+      "strategies": [
+        "restrict_microsoft_office_macros"
+      ]
     },
     {
       "ism_control": "ISM-1489",
       "description": "Microsoft Office macro security settings cannot be changed by users.",
-      "maturity_applicability": { "level1": true, "level2": true, "level3": true },
-      "strategies": ["restrict_microsoft_office_macros"]
+      "maturity_applicability": {
+        "level1": true,
+        "level2": true,
+        "level3": true
+      },
+      "strategies": [
+        "restrict_microsoft_office_macros"
+      ]
     },
     {
       "ism_control": "ISM-1504",
-      "description": "Multi-factor authentication is used to authenticate users to their organisation’s online services that process, store or communicate their organisation’s sensitive data.",
-      "maturity_applicability": { "level1": true, "level2": true, "level3": true },
-      "strategies": ["multi_factor_authentication"]
+      "description": "Multi-factor authentication is used to authenticate users to their organisation's online services that process, store or communicate their organisation's sensitive data.",
+      "maturity_applicability": {
+        "level1": true,
+        "level2": true,
+        "level3": true
+      },
+      "strategies": [
+        "multi_factor_authentication"
+      ]
     },
     {
       "ism_control": "ISM-1679",
-      "description": "Multi-factor authentication is used to authenticate users to third-party online services that process, store or communicate their organisation’s sensitive data.",
-      "maturity_applicability": { "level1": true, "level2": true, "level3": true },
-      "strategies": ["multi_factor_authentication"]
+      "description": "Multi-factor authentication is used to authenticate users to third-party online services that process, store or communicate their organisation's sensitive data.",
+      "maturity_applicability": {
+        "level1": true,
+        "level2": true,
+        "level3": true
+      },
+      "strategies": [
+        "multi_factor_authentication"
+      ]
     },
     {
       "ism_control": "ISM-1680",
-      "description": "Multi-factor authentication (where available) is used to authenticate users to third-party online services that process, store or communicate their organisation’s non-sensitive data.",
-      "maturity_applicability": { "level1": true, "level2": true, "level3": true },
-      "strategies": ["multi_factor_authentication"]
+      "description": "Multi-factor authentication (where available) is used to authenticate users to third-party online services that process, store or communicate their organisation's non-sensitive data.",
+      "maturity_applicability": {
+        "level1": true,
+        "level2": true,
+        "level3": true
+      },
+      "strategies": [
+        "multi_factor_authentication"
+      ]
     },
     {
       "ism_control": "ISM-1892",
-      "description": "Multi-factor authentication is used to authenticate users to their organisation’s online customer services that process, store or communicate their organisation’s sensitive customer data.",
-      "maturity_applicability": { "level1": true, "level2": true, "level3": true },
-      "strategies": ["multi_factor_authentication"]
+      "description": "Multi-factor authentication is used to authenticate users to their organisation's online customer services that process, store or communicate their organisation's sensitive customer data.",
+      "maturity_applicability": {
+        "level1": true,
+        "level2": true,
+        "level3": true
+      },
+      "strategies": [
+        "multi_factor_authentication"
+      ]
     },
     {
       "ism_control": "ISM-1893",
-      "description": "Multi-factor authentication is used to authenticate users to third-party online customer services that process, store or communicate their organisation’s sensitive customer data.",
-      "maturity_applicability": { "level1": true, "level2": true, "level3": true },
-      "strategies": ["multi_factor_authentication"]
+      "description": "Multi-factor authentication is used to authenticate users to third-party online customer services that process, store or communicate their organisation's sensitive customer data.",
+      "maturity_applicability": {
+        "level1": true,
+        "level2": true,
+        "level3": true
+      },
+      "strategies": [
+        "multi_factor_authentication"
+      ]
     },
     {
       "ism_control": "ISM-1681",
       "description": "Multi-factor authentication is used to authenticate customers to online customer services that process, store or communicate sensitive customer data.",
-      "maturity_applicability": { "level1": true, "level2": true, "level3": true },
-      "strategies": ["multi_factor_authentication"]
+      "maturity_applicability": {
+        "level1": true,
+        "level2": true,
+        "level3": true
+      },
+      "strategies": [
+        "multi_factor_authentication"
+      ]
     },
     {
       "ism_control": "ISM-1173",
       "description": "Multi-factor authentication is used to authenticate privileged users of systems.",
-      "maturity_applicability": { "level1": false, "level2": true, "level3": true },
-      "strategies": ["multi_factor_authentication"]
+      "maturity_applicability": {
+        "level1": false,
+        "level2": true,
+        "level3": true
+      },
+      "strategies": [
+        "multi_factor_authentication"
+      ]
     },
     {
       "ism_control": "ISM-0974",
       "description": "Multi-factor authentication is used to authenticate unprivileged users of systems.",
-      "maturity_applicability": { "level1": false, "level2": true, "level3": true },
-      "strategies": ["multi_factor_authentication"]
+      "maturity_applicability": {
+        "level1": false,
+        "level2": true,
+        "level3": true
+      },
+      "strategies": [
+        "multi_factor_authentication"
+      ]
     },
     {
       "ism_control": "ISM-1505",
       "description": "Multi-factor authentication is used to authenticate users of data repositories.",
-      "maturity_applicability": { "level1": false, "level2": false, "level3": true },
-      "strategies": ["multi_factor_authentication"]
+      "maturity_applicability": {
+        "level1": false,
+        "level2": false,
+        "level3": true
+      },
+      "strategies": [
+        "multi_factor_authentication"
+      ]
     },
     {
       "ism_control": "ISM-1401",
       "description": "Multi-factor authentication uses either: something users have and something users know, or something users have that is unlocked by something users know or are.",
-      "maturity_applicability": { "level1": true, "level2": true, "level3": true },
-      "strategies": ["multi_factor_authentication"]
+      "maturity_applicability": {
+        "level1": true,
+        "level2": true,
+        "level3": true
+      },
+      "strategies": [
+        "multi_factor_authentication"
+      ]
     },
     {
       "ism_control": "ISM-1872",
       "description": "Multi-factor authentication used for authenticating users of online services is phishing-resistant.",
-      "maturity_applicability": { "level1": false, "level2": true, "level3": true },
-      "strategies": ["multi_factor_authentication"]
+      "maturity_applicability": {
+        "level1": false,
+        "level2": true,
+        "level3": true
+      },
+      "strategies": [
+        "multi_factor_authentication"
+      ]
     },
     {
       "ism_control": "ISM-1873",
       "description": "Multi-factor authentication used for authenticating customers of online customer services provides a phishing-resistant option.",
-      "maturity_applicability": { "level1": false, "level2": true, "level3": false },
-      "strategies": ["multi_factor_authentication"]
+      "maturity_applicability": {
+        "level1": false,
+        "level2": true,
+        "level3": false
+      },
+      "strategies": [
+        "multi_factor_authentication"
+      ]
     },
     {
       "ism_control": "ISM-1874",
       "description": "Multi-factor authentication used for authenticating customers of online customer services is phishing-resistant.",
-      "maturity_applicability": { "level1": false, "level2": false, "level3": true },
-      "strategies": ["multi_factor_authentication"]
+      "maturity_applicability": {
+        "level1": false,
+        "level2": false,
+        "level3": true
+      },
+      "strategies": [
+        "multi_factor_authentication"
+      ]
     },
     {
       "ism_control": "ISM-1682",
       "description": "Multi-factor authentication used for authenticating users of systems is phishing-resistant.",
-      "maturity_applicability": { "level1": false, "level2": true, "level3": true },
-      "strategies": ["multi_factor_authentication"]
+      "maturity_applicability": {
+        "level1": false,
+        "level2": true,
+        "level3": true
+      },
+      "strategies": [
+        "multi_factor_authentication"
+      ]
     },
     {
       "ism_control": "ISM-1894",
       "description": "Multi-factor authentication used for authenticating users of data repositories is phishing-resistant.",
-      "maturity_applicability": { "level1": false, "level2": false, "level3": true },
-      "strategies": ["multi_factor_authentication"]
+      "maturity_applicability": {
+        "level1": false,
+        "level2": false,
+        "level3": true
+      },
+      "strategies": [
+        "multi_factor_authentication"
+      ]
     },
     {
       "ism_control": "ISM-1683",
       "description": "Successful and unsuccessful multi-factor authentication events are centrally logged.",
-      "maturity_applicability": { "level1": false, "level2": true, "level3": true },
-      "strategies": ["multi_factor_authentication"]
+      "maturity_applicability": {
+        "level1": false,
+        "level2": true,
+        "level3": true
+      },
+      "strategies": [
+        "multi_factor_authentication"
+      ]
     },
     {
       "ism_control": "ISM-1685",
       "description": "Credentials for break glass accounts, local administrator accounts and service accounts are long, unique, unpredictable and managed.",
-      "maturity_applicability": { "level1": false, "level2": true, "level3": true },
-      "strategies": ["restrict_administrative_privileges"]
+      "maturity_applicability": {
+        "level1": false,
+        "level2": true,
+        "level3": true
+      },
+      "strategies": [
+        "restrict_administrative_privileges"
+      ]
     },
     {
       "ism_control": "ISM-1896",
       "description": "Memory integrity functionality is enabled.",
-      "maturity_applicability": { "level1": false, "level2": false, "level3": true },
-      "strategies": ["restrict_administrative_privileges"]
+      "maturity_applicability": {
+        "level1": false,
+        "level2": false,
+        "level3": true
+      },
+      "strategies": [
+        "restrict_administrative_privileges"
+      ]
     },
     {
       "ism_control": "ISM-1861",
       "description": "Local Security Authority protection functionality is enabled.",
-      "maturity_applicability": { "level1": false, "level2": false, "level3": true },
-      "strategies": ["restrict_administrative_privileges"]
+      "maturity_applicability": {
+        "level1": false,
+        "level2": false,
+        "level3": true
+      },
+      "strategies": [
+        "restrict_administrative_privileges"
+      ]
     },
     {
       "ism_control": "ISM-1686",
       "description": "Credential Guard functionality is enabled.",
-      "maturity_applicability": { "level1": false, "level2": false, "level3": true },
-      "strategies": ["restrict_administrative_privileges"]
+      "maturity_applicability": {
+        "level1": false,
+        "level2": false,
+        "level3": true
+      },
+      "strategies": [
+        "restrict_administrative_privileges"
+      ]
     },
     {
       "ism_control": "ISM-1897",
       "description": "Remote Credential Guard functionality is enabled.",
-      "maturity_applicability": { "level1": false, "level2": false, "level3": true },
-      "strategies": ["restrict_administrative_privileges"]
+      "maturity_applicability": {
+        "level1": false,
+        "level2": false,
+        "level3": true
+      },
+      "strategies": [
+        "restrict_administrative_privileges"
+      ]
     },
     {
       "ism_control": "ISM-1898",
       "description": "Secure Admin Workstations are used in the performance of administrative activities.",
-      "maturity_applicability": { "level1": false, "level2": false, "level3": true },
-      "strategies": ["restrict_administrative_privileges"]
+      "maturity_applicability": {
+        "level1": false,
+        "level2": false,
+        "level3": true
+      },
+      "strategies": [
+        "restrict_administrative_privileges"
+      ]
     },
     {
       "ism_control": "ISM-1380",
       "description": "Privileged users use separate privileged and unprivileged operating environments.",
-      "maturity_applicability": { "level1": true, "level2": true, "level3": true },
-      "strategies": ["restrict_administrative_privileges"]
+      "maturity_applicability": {
+        "level1": true,
+        "level2": true,
+        "level3": true
+      },
+      "strategies": [
+        "restrict_administrative_privileges"
+      ]
     },
     {
       "ism_control": "ISM-1687",
       "description": "Privileged operating environments are not virtualised within unprivileged operating environments.",
-      "maturity_applicability": { "level1": false, "level2": true, "level3": true },
-      "strategies": ["restrict_administrative_privileges"]
+      "maturity_applicability": {
+        "level1": false,
+        "level2": true,
+        "level3": true
+      },
+      "strategies": [
+        "restrict_administrative_privileges"
+      ]
     },
     {
       "ism_control": "ISM-1688",
       "description": "Unprivileged user accounts cannot logon to privileged operating environments.",
-      "maturity_applicability": { "level1": true, "level2": true, "level3": true },
-      "strategies": ["restrict_administrative_privileges"]
+      "maturity_applicability": {
+        "level1": true,
+        "level2": true,
+        "level3": true
+      },
+      "strategies": [
+        "restrict_administrative_privileges"
+      ]
     },
     {
       "ism_control": "ISM-1689",
       "description": "Privileged user accounts (excluding local administrator accounts) cannot logon to unprivileged operating environments.",
-      "maturity_applicability": { "level1": true, "level2": true, "level3": true },
-      "strategies": ["restrict_administrative_privileges"]
+      "maturity_applicability": {
+        "level1": true,
+        "level2": true,
+        "level3": true
+      },
+      "strategies": [
+        "restrict_administrative_privileges"
+      ]
     },
     {
       "ism_control": "ISM-1387",
       "description": "Administrative activities are conducted through jump servers.",
-      "maturity_applicability": { "level1": false, "level2": true, "level3": true },
-      "strategies": ["restrict_administrative_privileges"]
+      "maturity_applicability": {
+        "level1": false,
+        "level2": true,
+        "level3": true
+      },
+      "strategies": [
+        "restrict_administrative_privileges"
+      ]
     },
     {
       "ism_control": "ISM-1807",
       "description": "An automated method of asset discovery is used at least fortnightly to support the detection of assets for subsequent vulnerability scanning activities.",
-      "maturity_applicability": { "level1": true, "level2": true, "level3": true },
-      "strategies": ["patch_applications", "patch_operating_systems"]
+      "maturity_applicability": {
+        "level1": true,
+        "level2": true,
+        "level3": true
+      },
+      "strategies": [
+        "patch_applications",
+        "patch_operating_systems"
+      ]
     },
     {
       "ism_control": "ISM-1808",
       "description": "A vulnerability scanner with an up-to-date vulnerability database is used for vulnerability scanning activities.",
-      "maturity_applicability": { "level1": true, "level2": true, "level3": true },
-      "strategies": ["patch_applications", "patch_operating_systems"]
+      "maturity_applicability": {
+        "level1": true,
+        "level2": true,
+        "level3": true
+      },
+      "strategies": [
+        "patch_applications",
+        "patch_operating_systems"
+      ]
     },
     {
       "ism_control": "ISM-1698",
       "description": "A vulnerability scanner is used at least daily to identify missing patches or updates for vulnerabilities in online services.",
-      "maturity_applicability": { "level1": true, "level2": true, "level3": true },
-      "strategies": ["patch_applications"]
+      "maturity_applicability": {
+        "level1": true,
+        "level2": true,
+        "level3": true
+      },
+      "strategies": [
+        "patch_applications"
+      ]
     },
     {
       "ism_control": "ISM-1699",
-      "description": "A vulnerability scanner is used at least weekly to identify missing patches or updates for vulnerabilities in office productivity suites, web browsers and their extensions, email clients, PDF applications, and security products.",
-      "maturity_applicability": { "level1": true, "level2": true, "level3": true },
-      "strategies": ["patch_applications"]
+      "description": "A vulnerability scanner is used at least weekly to identify missing patches or updates for vulnerabilities in office productivity suites, web browsers and their extensions, email clients, PDF software, and security products.",
+      "maturity_applicability": {
+        "level1": true,
+        "level2": true,
+        "level3": true
+      },
+      "strategies": [
+        "patch_applications"
+      ]
     },
     {
       "ism_control": "ISM-1700",
-      "description": "A vulnerability scanner is used at least fortnightly to identify missing patches or updates for vulnerabilities in applications other than office productivity suites, web browsers and their extensions, email clients, PDF applications, and security products.",
-      "maturity_applicability": { "level1": false, "level2": true, "level3": true },
-      "strategies": ["patch_applications"]
+      "description": "A vulnerability scanner is used at least fortnightly to identify missing patches or updates for vulnerabilities in applications other than office productivity suites, web browsers and their extensions, email clients, PDF software, and security products.",
+      "maturity_applicability": {
+        "level1": false,
+        "level2": true,
+        "level3": true
+      },
+      "strategies": [
+        "patch_applications"
+      ]
     },
     {
       "ism_control": "ISM-1701",
       "description": "A vulnerability scanner is used at least daily to identify missing patches or updates for vulnerabilities in operating systems of internet-facing servers and internet-facing network devices.",
-      "maturity_applicability": { "level1": true, "level2": true, "level3": true },
-      "strategies": ["patch_operating_systems"]
+      "maturity_applicability": {
+        "level1": true,
+        "level2": true,
+        "level3": true
+      },
+      "strategies": [
+        "patch_operating_systems"
+      ]
     },
     {
       "ism_control": "ISM-1702",
       "description": "A vulnerability scanner is used at least fortnightly to identify missing patches or updates for vulnerabilities in operating systems of workstations, non-internet-facing servers and non-internet-facing network devices.",
-      "maturity_applicability": { "level1": true, "level2": true, "level3": true },
-      "strategies": ["patch_operating_systems"]
+      "maturity_applicability": {
+        "level1": true,
+        "level2": true,
+        "level3": true
+      },
+      "strategies": [
+        "patch_operating_systems"
+      ]
     },
     {
       "ism_control": "ISM-1703",
       "description": "A vulnerability scanner is used at least fortnightly to identify missing patches or updates for vulnerabilities in drivers.",
-      "maturity_applicability": { "level1": false, "level2": false, "level3": true },
-      "strategies": ["patch_operating_systems"]
+      "maturity_applicability": {
+        "level1": false,
+        "level2": false,
+        "level3": true
+      },
+      "strategies": [
+        "patch_operating_systems"
+      ]
     },
     {
       "ism_control": "ISM-1900",
       "description": "A vulnerability scanner is used at least fortnightly to identify missing patches or updates for vulnerabilities in firmware.",
-      "maturity_applicability": { "level1": false, "level2": false, "level3": true },
-      "strategies": ["patch_operating_systems"]
+      "maturity_applicability": {
+        "level1": false,
+        "level2": false,
+        "level3": true
+      },
+      "strategies": [
+        "patch_operating_systems"
+      ]
     },
     {
       "ism_control": "ISM-1876",
       "description": "Patches, updates or other vendor mitigations for vulnerabilities in online services are applied within 48 hours of release when vulnerabilities are assessed as critical by vendors or when working exploits exist.",
-      "maturity_applicability": { "level1": true, "level2": true, "level3": true },
-      "strategies": ["patch_applications"]
+      "maturity_applicability": {
+        "level1": true,
+        "level2": true,
+        "level3": true
+      },
+      "strategies": [
+        "patch_applications"
+      ]
     },
     {
       "ism_control": "ISM-1690",
       "description": "Patches, updates or other vendor mitigations for vulnerabilities in online services are applied within two weeks of release when vulnerabilities are assessed as non-critical by vendors and no working exploits exist.",
-      "maturity_applicability": { "level1": true, "level2": true, "level3": true },
-      "strategies": ["patch_applications"]
+      "maturity_applicability": {
+        "level1": true,
+        "level2": true,
+        "level3": true
+      },
+      "strategies": [
+        "patch_applications"
+      ]
     },
     {
       "ism_control": "ISM-1691",
-      "description": "Patches, updates or other vendor mitigations for vulnerabilities in office productivity suites, web browsers and their extensions, email clients, PDF applications, and security products are applied within two weeks of release.",
-      "maturity_applicability": { "level1": true, "level2": true, "level3": false },
-      "strategies": ["patch_applications"]
+      "description": "Patches, updates or other vendor mitigations for vulnerabilities in office productivity suites, web browsers and their extensions, email clients, PDF software, and security products are applied within two weeks of release.",
+      "maturity_applicability": {
+        "level1": true,
+        "level2": true,
+        "level3": false
+      },
+      "strategies": [
+        "patch_applications"
+      ]
     },
     {
       "ism_control": "ISM-1692",
-      "description": "Patches, updates or other vendor mitigations for vulnerabilities in office productivity suites, web browsers and their extensions, email clients, PDF applications, and security products are applied within 48 hours of release when vulnerabilities are assessed as critical by vendors or when working exploits exist.",
-      "maturity_applicability": { "level1": false, "level2": false, "level3": true },
-      "strategies": ["patch_applications"]
+      "description": "Patches, updates or other vendor mitigations for vulnerabilities in office productivity suites, web browsers and their extensions, email clients, PDF software, and security products are applied within 48 hours of release when vulnerabilities are assessed as critical by vendors or when working exploits exist.",
+      "maturity_applicability": {
+        "level1": false,
+        "level2": false,
+        "level3": true
+      },
+      "strategies": [
+        "patch_applications"
+      ]
     },
     {
       "ism_control": "ISM-1901",
-      "description": "Patches, updates or other vendor mitigations for vulnerabilities in office productivity suites, web browsers and their extensions, email clients, PDF applications, and security products are applied within two weeks of release when vulnerabilities are assessed as non-critical by vendors and no working exploits exist.",
-      "maturity_applicability": { "level1": false, "level2": false, "level3": true },
-      "strategies": ["patch_applications"]
+      "description": "Patches, updates or other vendor mitigations for vulnerabilities in office productivity suites, web browsers and their extensions, email clients, PDF software, and security products are applied within two weeks of release when vulnerabilities are assessed as non-critical by vendors and no working exploits exist.",
+      "maturity_applicability": {
+        "level1": false,
+        "level2": false,
+        "level3": true
+      },
+      "strategies": [
+        "patch_applications"
+      ]
     },
     {
       "ism_control": "ISM-1693",
-      "description": "Patches, updates or other vendor mitigations for vulnerabilities in applications other than office productivity suites, web browsers and their extensions, email clients, PDF applications, and security products are applied within one month of release.",
-      "maturity_applicability": { "level1": false, "level2": true, "level3": true },
-      "strategies": ["patch_applications"]
+      "description": "Patches, updates or other vendor mitigations for vulnerabilities in applications other than office productivity suites, web browsers and their extensions, email clients, PDF software, and security products are applied within one month of release.",
+      "maturity_applicability": {
+        "level1": false,
+        "level2": true,
+        "level3": true
+      },
+      "strategies": [
+        "patch_applications"
+      ]
     },
     {
       "ism_control": "ISM-1877",
       "description": "Patches, updates or other vendor mitigations for vulnerabilities in operating systems of internet-facing servers and internet-facing network devices are applied within 48 hours of release when vulnerabilities are assessed as critical by vendors or when working exploits exist.",
-      "maturity_applicability": { "level1": true, "level2": true, "level3": true },
-      "strategies": ["patch_operating_systems"]
+      "maturity_applicability": {
+        "level1": true,
+        "level2": true,
+        "level3": true
+      },
+      "strategies": [
+        "patch_operating_systems"
+      ]
     },
     {
       "ism_control": "ISM-1694",
       "description": "Patches, updates or other vendor mitigations for vulnerabilities in operating systems of internet-facing servers and internet-facing network devices are applied within two weeks of release when vulnerabilities are assessed as non-critical by vendors and no working exploits exist.",
-      "maturity_applicability": { "level1": true, "level2": true, "level3": true },
-      "strategies": ["patch_operating_systems"]
+      "maturity_applicability": {
+        "level1": true,
+        "level2": true,
+        "level3": true
+      },
+      "strategies": [
+        "patch_operating_systems"
+      ]
     },
     {
       "ism_control": "ISM-1695",
       "description": "Patches, updates or other vendor mitigations for vulnerabilities in operating systems of workstations, non-internet-facing servers and non-internet-facing network devices are applied within one month of release.",
-      "maturity_applicability": { "level1": true, "level2": true, "level3": false },
-      "strategies": ["patch_operating_systems"]
+      "maturity_applicability": {
+        "level1": true,
+        "level2": true,
+        "level3": false
+      },
+      "strategies": [
+        "patch_operating_systems"
+      ]
     },
     {
       "ism_control": "ISM-1696",
       "description": "Patches, updates or other vendor mitigations for vulnerabilities in operating systems of workstations, non-internet-facing servers and non-internet-facing network devices are applied within 48 hours of release when vulnerabilities are assessed as critical by vendors or when working exploits exist.",
-      "maturity_applicability": { "level1": false, "level2": false, "level3": true },
-      "strategies": ["patch_operating_systems"]
+      "maturity_applicability": {
+        "level1": false,
+        "level2": false,
+        "level3": true
+      },
+      "strategies": [
+        "patch_operating_systems"
+      ]
     },
     {
       "ism_control": "ISM-1902",
       "description": "Patches, updates or other vendor mitigations for vulnerabilities in operating systems of workstations, non-internet-facing servers and non-internet-facing network devices are applied within one month of release when vulnerabilities are assessed as non-critical by vendors and no working exploits exist.",
-      "maturity_applicability": { "level1": false, "level2": false, "level3": true },
-      "strategies": ["patch_operating_systems"]
+      "maturity_applicability": {
+        "level1": false,
+        "level2": false,
+        "level3": true
+      },
+      "strategies": [
+        "patch_operating_systems"
+      ]
     },
     {
       "ism_control": "ISM-1879",
       "description": "Patches, updates or other vendor mitigations for vulnerabilities in drivers are applied within 48 hours of release when vulnerabilities are assessed as critical by vendors or when working exploits exist.",
-      "maturity_applicability": { "level1": false, "level2": false, "level3": true },
-      "strategies": ["patch_operating_systems"]
+      "maturity_applicability": {
+        "level1": false,
+        "level2": false,
+        "level3": true
+      },
+      "strategies": [
+        "patch_operating_systems"
+      ]
     },
     {
       "ism_control": "ISM-1697",
       "description": "Patches, updates or other vendor mitigations for vulnerabilities in drivers are applied within one month of release when vulnerabilities are assessed as non-critical by vendors and no working exploits exist.",
-      "maturity_applicability": { "level1": false, "level2": false, "level3": true },
-      "strategies": ["patch_operating_systems"]
+      "maturity_applicability": {
+        "level1": false,
+        "level2": false,
+        "level3": true
+      },
+      "strategies": [
+        "patch_operating_systems"
+      ]
     },
     {
       "ism_control": "ISM-1903",
       "description": "Patches, updates or other vendor mitigations for vulnerabilities in firmware are applied within 48 hours of release when vulnerabilities are assessed as critical by vendors or when working exploits exist.",
-      "maturity_applicability": { "level1": false, "level2": false, "level3": true },
-      "strategies": ["patch_operating_systems"]
+      "maturity_applicability": {
+        "level1": false,
+        "level2": false,
+        "level3": true
+      },
+      "strategies": [
+        "patch_operating_systems"
+      ]
     },
     {
       "ism_control": "ISM-1904",
       "description": "Patches, updates or other vendor mitigations for vulnerabilities in firmware are applied within one month of release when vulnerabilities are assessed as non-critical by vendors and no working exploits exist.",
-      "maturity_applicability": { "level1": false, "level2": false, "level3": true },
-      "strategies": ["patch_operating_systems"]
+      "maturity_applicability": {
+        "level1": false,
+        "level2": false,
+        "level3": true
+      },
+      "strategies": [
+        "patch_operating_systems"
+      ]
     },
     {
       "ism_control": "ISM-1905",
       "description": "Online services that are no longer supported by vendors are removed.",
-      "maturity_applicability": { "level1": true, "level2": true, "level3": true },
-      "strategies": ["patch_applications"]
+      "maturity_applicability": {
+        "level1": true,
+        "level2": true,
+        "level3": true
+      },
+      "strategies": [
+        "patch_applications"
+      ]
     },
     {
       "ism_control": "ISM-1704",
-      "description": "Office productivity suites, web browsers and their extensions, email clients, PDF applications, Adobe Flash Player, and security products that are no longer supported by vendors are removed.",
-      "maturity_applicability": { "level1": true, "level2": true, "level3": true },
-      "strategies": ["patch_applications"]
+      "description": "Office productivity suites, web browsers and their extensions, email clients, PDF software, Adobe Flash Player, and security products that are no longer supported by vendors are removed.",
+      "maturity_applicability": {
+        "level1": true,
+        "level2": true,
+        "level3": true
+      },
+      "strategies": [
+        "patch_applications"
+      ]
     },
     {
       "ism_control": "ISM-0304",
-      "description": "Applications other than office productivity suites, web browsers and their extensions, email clients, PDF applications, Adobe Flash Player, and security products that are no longer supported by vendors are removed.",
-      "maturity_applicability": { "level1": false, "level2": false, "level3": true },
-      "strategies": ["patch_applications"]
+      "description": "Applications other than office productivity suites, web browsers and their extensions, email clients, PDF software, Adobe Flash Player, and security products that are no longer supported by vendors are removed.",
+      "maturity_applicability": {
+        "level1": false,
+        "level2": false,
+        "level3": true
+      },
+      "strategies": [
+        "patch_applications"
+      ]
     },
     {
       "ism_control": "ISM-1501",
       "description": "Operating systems that are no longer supported by vendors are replaced.",
-      "maturity_applicability": { "level1": true, "level2": true, "level3": true },
-      "strategies": ["patch_operating_systems"]
+      "maturity_applicability": {
+        "level1": true,
+        "level2": true,
+        "level3": true
+      },
+      "strategies": [
+        "patch_operating_systems"
+      ]
     },
     {
       "ism_control": "ISM-1511",
       "description": "Backups of data, applications and settings are performed and retained in accordance with business criticality and business continuity requirements.",
-      "maturity_applicability": { "level1": true, "level2": true, "level3": true },
-      "strategies": ["regular_backups"]
+      "maturity_applicability": {
+        "level1": true,
+        "level2": true,
+        "level3": true
+      },
+      "strategies": [
+        "regular_backups"
+      ]
     },
     {
       "ism_control": "ISM-1810",
       "description": "Backups of data, applications and settings are synchronised to enable restoration to a common point in time.",
-      "maturity_applicability": { "level1": true, "level2": true, "level3": true },
-      "strategies": ["regular_backups"]
+      "maturity_applicability": {
+        "level1": true,
+        "level2": true,
+        "level3": true
+      },
+      "strategies": [
+        "regular_backups"
+      ]
     },
     {
       "ism_control": "ISM-1811",
       "description": "Backups of data, applications and settings are retained in a secure and resilient manner.",
-      "maturity_applicability": { "level1": true, "level2": true, "level3": true },
-      "strategies": ["regular_backups"]
+      "maturity_applicability": {
+        "level1": true,
+        "level2": true,
+        "level3": true
+      },
+      "strategies": [
+        "regular_backups"
+      ]
     },
     {
       "ism_control": "ISM-1812",
       "description": "Unprivileged user accounts cannot access backups belonging to other user accounts.",
-      "maturity_applicability": { "level1": true, "level2": true, "level3": true },
-      "strategies": ["regular_backups"]
+      "maturity_applicability": {
+        "level1": true,
+        "level2": true,
+        "level3": true
+      },
+      "strategies": [
+        "regular_backups"
+      ]
     },
     {
       "ism_control": "ISM-1813",
       "description": "Unprivileged user accounts cannot access their own backups.",
-      "maturity_applicability": { "level1": false, "level2": false, "level3": true },
-      "strategies": ["regular_backups"]
+      "maturity_applicability": {
+        "level1": false,
+        "level2": false,
+        "level3": true
+      },
+      "strategies": [
+        "regular_backups"
+      ]
     },
     {
       "ism_control": "ISM-1705",
       "description": "Privileged user accounts (excluding backup administrator accounts) cannot access backups belonging to other user accounts.",
-      "maturity_applicability": { "level1": false, "level2": true, "level3": true },
-      "strategies": ["regular_backups"]
+      "maturity_applicability": {
+        "level1": false,
+        "level2": true,
+        "level3": true
+      },
+      "strategies": [
+        "regular_backups"
+      ]
     },
     {
       "ism_control": "ISM-1706",
       "description": "Privileged user accounts (excluding backup administrator accounts) cannot access their own backups.",
-      "maturity_applicability": { "level1": false, "level2": false, "level3": true },
-      "strategies": ["regular_backups"]
+      "maturity_applicability": {
+        "level1": false,
+        "level2": false,
+        "level3": true
+      },
+      "strategies": [
+        "regular_backups"
+      ]
     },
     {
       "ism_control": "ISM-1814",
       "description": "Unprivileged user accounts are prevented from modifying and deleting backups.",
-      "maturity_applicability": { "level1": true, "level2": true, "level3": true },
-      "strategies": ["regular_backups"]
+      "maturity_applicability": {
+        "level1": true,
+        "level2": true,
+        "level3": true
+      },
+      "strategies": [
+        "regular_backups"
+      ]
     },
     {
       "ism_control": "ISM-1707",
       "description": "Privileged user accounts (excluding backup administrator accounts) are prevented from modifying and deleting backups.",
-      "maturity_applicability": { "level1": false, "level2": true, "level3": true },
-      "strategies": ["regular_backups"]
+      "maturity_applicability": {
+        "level1": false,
+        "level2": true,
+        "level3": true
+      },
+      "strategies": [
+        "regular_backups"
+      ]
     },
     {
       "ism_control": "ISM-1708",
       "description": "Backup administrator accounts are prevented from modifying and deleting backups during their retention period.",
-      "maturity_applicability": { "level1": false, "level2": false, "level3": true },
-      "strategies": ["regular_backups"]
+      "maturity_applicability": {
+        "level1": false,
+        "level2": false,
+        "level3": true
+      },
+      "strategies": [
+        "regular_backups"
+      ]
     },
     {
       "ism_control": "ISM-1515",
       "description": "Restoration of data, applications and settings from backups to a common point in time is tested as part of disaster recovery exercises.",
-      "maturity_applicability": { "level1": true, "level2": true, "level3": true },
-      "strategies": ["regular_backups"]
+      "maturity_applicability": {
+        "level1": true,
+        "level2": true,
+        "level3": true
+      },
+      "strategies": [
+        "regular_backups"
+      ]
     },
     {
       "ism_control": "ISM-1815",
       "description": "Event logs are protected from unauthorised modification and deletion.",
-      "maturity_applicability": { "level1": false, "level2": true, "level3": true },
+      "maturity_applicability": {
+        "level1": false,
+        "level2": true,
+        "level3": true
+      },
       "strategies": [
         "multi_factor_authentication",
         "restrict_administrative_privileges",
@@ -773,7 +1499,11 @@
     {
       "ism_control": "ISM-1906",
       "description": "Event logs from internet-facing servers are analysed in a timely manner to detect cybersecurity events.",
-      "maturity_applicability": { "level1": false, "level2": true, "level3": true },
+      "maturity_applicability": {
+        "level1": false,
+        "level2": true,
+        "level3": true
+      },
       "strategies": [
         "multi_factor_authentication",
         "restrict_administrative_privileges",
@@ -784,7 +1514,11 @@
     {
       "ism_control": "ISM-1907",
       "description": "Event logs from non-internet-facing servers are analysed in a timely manner to detect cybersecurity events.",
-      "maturity_applicability": { "level1": false, "level2": false, "level3": true },
+      "maturity_applicability": {
+        "level1": false,
+        "level2": false,
+        "level3": true
+      },
       "strategies": [
         "multi_factor_authentication",
         "restrict_administrative_privileges",
@@ -795,7 +1529,11 @@
     {
       "ism_control": "ISM-0109",
       "description": "Event logs from workstations are analysed in a timely manner to detect cybersecurity events.",
-      "maturity_applicability": { "level1": false, "level2": false, "level3": true },
+      "maturity_applicability": {
+        "level1": false,
+        "level2": false,
+        "level3": true
+      },
       "strategies": [
         "multi_factor_authentication",
         "restrict_administrative_privileges",
@@ -806,7 +1544,11 @@
     {
       "ism_control": "ISM-1228",
       "description": "Cybersecurity events are analysed in a timely manner to identify cybersecurity incidents.",
-      "maturity_applicability": { "level1": false, "level2": true, "level3": true },
+      "maturity_applicability": {
+        "level1": false,
+        "level2": true,
+        "level3": true
+      },
       "strategies": [
         "multi_factor_authentication",
         "restrict_administrative_privileges",
@@ -816,4 +1558,3 @@
     }
   ]
 }
-
