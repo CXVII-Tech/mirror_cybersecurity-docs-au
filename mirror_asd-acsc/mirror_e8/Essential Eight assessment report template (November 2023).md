@@ -22,20 +22,20 @@
 
 ## Prepared by
 
-| **Assessor Organisation Name** |  |  |
-| --- | --- | --- |
-|  | **Address** |  |
-|  | **Assessor name** |  |
-|  | **Assessor qualifications** |  |
-|  | **Contact email** |  |
+| **Assessor Organisation Name** |  |
+| --- | --- |
+| **Address** |  |
+| **Assessor name** |  |
+| **Assessor qualifications** |  |
+| **Contact email** |  |
 
 ## Prepared for
 
-| **Entity Name** |  |  |
-| --- | --- | --- |
-|  | **Address** |  |
-|  | **Contact name** |  |
-|  | **Contact email** |  |
+| **Entity Name** |  |
+| --- | --- |
+| **Address** |  |
+| **Contact name** |  |
+| **Contact email** |  |
 
 ## Revision history
 

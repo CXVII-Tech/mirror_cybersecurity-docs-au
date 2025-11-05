@@ -4,13 +4,13 @@ While no set of mitigation strategies are guaranteed to protect against all cybe
 
 ## Table of Contents
 
-- [Essential Eight explained](https://www.cyber.gov.au/business-government/asds-cyber-security-frameworks/essential-eight/essential-eight-explained)
-- [Essential Eight assessment process guide](https://www.cyber.gov.au/business-government/asds-cyber-security-frameworks/essential-eight/essential-eight-assessment-process-guide)
-- [Essential Eight maturity model](https://www.cyber.gov.au/business-government/asds-cyber-security-frameworks/essential-eight/essential-eight-maturity-model)
-- [Essential Eight maturity model changes](https://www.cyber.gov.au/business-government/asds-cyber-security-frameworks/essential-eight/essential-eight-maturity-model-changes)
-- [Essential Eight maturity model FAQ](https://www.cyber.gov.au/business-government/asds-cyber-security-frameworks/essential-eight/essential-eight-maturity-model-faq)
-- [Essential Eight maturity model and ISM mapping](https://www.cyber.gov.au/business-government/asds-cyber-security-frameworks/essential-eight/essential-eight-maturity-model-and-ism-mapping)
-- [Essential Eight assessment course](https://www.cyber.gov.au/business-government/asds-cyber-security-frameworks/essential-eight/essential-eight-assessment-course)
+- [Essential Eight explained](Essential%20Eight%20explained.md)
+- [Essential Eight assessment process guide](Essential%20Eight%20assessment%20process%20guide.md)
+- [Essential Eight maturity model](Essential%20Eight%20maturity%20model.md)
+- [Essential Eight maturity model changes](Essential%20Eight%20maturity%20model%20changes.md)
+- [Essential Eight maturity model FAQ](Essential%20Eight%20maturity%20model%20FAQ.md)
+- [Essential Eight maturity model and ISM mapping](Essential%20Eight%20maturity%20model%20and%20ISM%20mapping.md)
+- [Essential Eight assessment course](Essential%20Eight%20assessment%20course.md)
 
 ## Disclaimer
 
