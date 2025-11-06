@@ -36,25 +36,7 @@ The section below provides guidance tailored to the assessment method. When sele
 |  | The above output should be reviewed alongside the release date for each application to determine whether patching timeframes have been met. |
 |  | Alternatively, PowerShell can be used to identify applications with registered uninstall functionality. However, this method alone will not always cover all applications that are installed on a system. As a result, it should be combined with the list of installed applications within ‘Programs and Features’. |
 |  | While this approach can be used for assessments, limitations in coverage should be noted. For key applications though, it will likely be sufficient. If any key applications appear to be missing in reports provided, this should be raised for clarification. |
-|  | Below is a PowerShell script to output a list of installed applications with registered uninstall functionality. This list should be reviewed in conjunction with the list of installed applications within ‘Programs and Features’ to ensure no applications are missed.
-```powershell
-function Analyze( $p, $f) {
-    Get-ItemProperty $p | foreach {
-        if (($_.DisplayName) -or ($_.version)) {
-            [PSCustomObject]@{
-                From = $f;
-                Name = $_.DisplayName;
-                Version = $_.DisplayVersion;
-                Install = $_.InstallDate
-            }
-        }
-    }
-}
-$s = @()
-$s += Analyze "HKLM:\Software\Microsoft\Windows\CurrentVersion\Uninstall\*" 64
-$s += Analyze "HKLM:\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\*" 32
-$s | Sort-Object -Property Name
-``` |
+|  | Below is a PowerShell script to output a list of installed applications with registered uninstall functionality. This list should be reviewed in conjunction with the list of installed applications within 'Programs and Features' to ensure no applications are missed.<br><pre><code>function Analyze( $p, $f) {<br>    Get-ItemProperty $p | foreach {<br>        if (($_.DisplayName) -or ($_.version)) {<br>            [PSCustomObject]@{<br>                From = $f;<br>                Name = $_.DisplayName;<br>                Version = $_.DisplayVersion;<br>                Install = $_.InstallDate<br>            }<br>        }<br>    }<br>}<br>$s = @()<br>$s += Analyze "HKLM:\Software\Microsoft\Windows\CurrentVersion\Uninstall\*" 64<br>$s += Analyze "HKLM:\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\*" 32<br>$s | Sort-Object -Property Name</code></pre> |
 |  | The combined list of installed applications should be reviewed alongside the release date for each application to determine whether patching timeframe have been met. |
 |  | If tools cannot be used, request a demonstration that shows the versions of installed applications and their install date. This allows for manual checking against the latest versions available from vendors. |
 | Online services that are no longer supported by vendors are removed. | A vulnerability scanner can be used to assess online services and whether they are end of life. |
@@ -154,11 +136,8 @@ The section below provides guidance tailored to the assessment method. When sele
 | --- | --- |
 | Privileged users are assigned a dedicated privileged user account to be used solely for duties requiring privileged access. | Discuss whether privileged users are assigned separate unprivileged and privileged user accounts or whether they use a single privileged user account for all their duties. |
 | Requests for privileged access to systems, applications and data repositories are validated when first requested. | Request copies of forms, support tickets or emails provided by users requesting privileged access to systems, applications or data repositories along with the support of their supervisor or either an application owner or data repository owner. This can then be compared to screenshots of user accounts with privileged access to determine if there are any discrepancies. |
-| Privileged user accounts (excluding those explicitly authorised to access online services) are prevented from accessing the internet, email and web services. | Attempt to browse the internet as a privileged user, review the internet proxy on the network to determine whether it is configured to block traffic from privileged user accounts. In addition, run the below PowerShell command to check if privileged user accounts have access to mailboxes and email addresses:
-```powershell
-Get-ADUser -Filter {(admincount -eq 1) -and (emailaddress -like "*") -and (enabled -eq $true)} -Properties EmailAddress | Select samaccountname, emailaddress
-```
-|  | Tools such as [BloodHound](https://www.sans.org/blog/bloodhound-sniffing-out-path-through-windows-domains/) can assist in identifying privileged user accounts that may be missed when utilising PowerShell alone. |
+| Privileged user accounts (excluding those explicitly authorised to access online services) are prevented from accessing the internet, email and web services. | Attempt to browse the internet as a privileged user, review the internet proxy on the network to determine whether it is configured to block traffic from privileged user accounts. In addition, run the below PowerShell command to check if privileged user accounts have access to mailboxes and email addresses:<br><pre><code>Get-ADUser -Filter {(admincount -eq 1) -and (emailaddress -like "*") -and (enabled -eq $true)} -Properties EmailAddress | Select samaccountname, emailaddress</code></pre> |
+|  | Tools such as [BloodHound](https://www.sans.org/blog/bloodhound-sniffing-out-path-through-windows-domains/) can assist in identifying privileged user accounts that may be missed when utilising PowerShell alone. |
 |  | Note, some privileged user accounts, such as those used to manage cloud services, may have access to the internet. In such cases, determine whether the user accounts have been explicitly authorised to do so via a formal process. |
 | Privileged user accounts explicitly authorised to access online services are strictly limited to only what is required for users and services to undertake their duties. | In cases where privileged user accounts have been explicitly authorised to access online services, such as for the management of cloud services, determine to what extent they are limited from accessing all other online services over the internet. |
 | Privileged users use separate privileged and unprivileged operating environments. | Discuss how privileged operating environments have been implemented for the management of the system. Note, at this maturity level there are no constraints on how this can be implemented beyond that separate privileged and unprivileged operating environments have been implemented. |
