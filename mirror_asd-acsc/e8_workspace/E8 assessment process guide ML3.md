@@ -242,17 +242,16 @@ The section below provides guidance tailored to the assessment method. When sele
   - For Microsoft Windows 11, this can be accessed via (Settings – Apps – Optional features – More Windows features).
   - For Microsoft Windows 10, this can be accessed via (Settings – Apps & features – Programs and Features – Turn Windows features on or off).
   - Check if legacy versions of PowerShell are installed by checking for a tick or black square against ‘Windows PowerShell 2.0’. To check if a downgrade to PowerShell 2.0 is available, run the following PowerShell command:
-  - <pre><code>Get-WindowsOptionalFeature -online
- Where-Object {$_.FeatureName -match "PowerShellv2"}</code></pre> |
+  - `Get-WindowsOptionalFeature -online | Where-Object {$_.FeatureName -match "PowerShellv2"}`
 - **PowerShell is configured to use Constrained Language Mode.**
-  - Request a screenshot of the output of running the following PowerShell command:<br>
+  - Request a screenshot of the output of running the following PowerShell command: `$ExecutionContext.SessionState.LanguageMode`
 
-    ```powershell
-    $ExecutionContext.SessionState.LanguageMode
-    ```
+  - If Constrained Language Mode is enabled, the output will be ‘ConstrainedLanguage’. Otherwise, the output will be ‘FullLanguage’.
 
-  - If Constrained Language Mode is enabled, the output will be ‘ConstrainedLanguage’. Otherwise, the output will be ‘FullLanguage’.- **Event logs from non-internet-facing servers are analysed in a timely manner to detect cybersecurity events.**
-  - Discuss whether SOC analysts monitor event logs for signs of compromise (i.e. security events).- **Event logs from workstations are analysed in a timely manner to detect cybersecurity events.**
+- **Event logs from non-internet-facing servers are analysed in a timely manner to detect cybersecurity events.**
+  - Discuss whether SOC analysts monitor event logs for signs of compromise (i.e. security events).
+
+- **Event logs from workstations are analysed in a timely manner to detect cybersecurity events.**
   - Discuss whether SOC analysts monitor event logs for signs of compromise (i.e. security events).
 ### **Regular backups**
 

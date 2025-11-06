@@ -109,33 +109,54 @@ The section below provides guidance tailored to the assessment method. When sele
 
 - **Privileged access to systems, applications and data repositories is disabled after 12 months unless revalidated.**
   - Check whether an expiry date is set for privileged user accounts in Active Directory under user account profiles and whether a mechanism exists to disable such user accounts after 12 months unless revalidated beforehand. Ask for a screenshot of the output of the following PowerShell commands that check for user accounts with either no expiration date or have an expiration date that exceeds 12 months:
-  - <pre><code>Get-ADUser -Filter {(admincount -eq 1) -and (enabled -eq $true)} -Properties AccountExpirationDate
- Where-Object {$_.AccountExpirationDate -like ""} | Select @{n='Username'; e={$_.SamAccountName}}, @{n='Account Expiration Date'; e={$_.AccountExpirationDate}}, @{n='Enabled'; e={$_.Enabled}}<br>Get-ADUser -Filter {(admincount -eq 1) -and (enabled -eq $true)} -Properties AccountExpirationDate | Where-Object {$_.AccountExpirationDate -gt (Get-Date).AddMonths(12)} | Select @{n='Username'; e={$_.SamAccountName}}, @{n='Account Expiration Date'; e={$_.AccountExpirationDate}}, @{n='Enabled'; e={$_.Enabled}}</code></pre> |
+  - `Get-ADUser -Filter {(admincount -eq 1) -and (enabled -eq $true)} -Properties AccountExpirationDate | Where-Object {$_.AccountExpirationDate -like ""} | Select @{n='Username'; e={$_.SamAccountName}}, @{n='Account Expiration Date'; e={$_.AccountExpirationDate}}, @{n='Enabled'; e={$_.Enabled}}` and `Get-ADUser -Filter {(admincount -eq 1) -and (enabled -eq $true)} -Properties AccountExpirationDate | Where-Object {$_.AccountExpirationDate -gt (Get-Date).AddMonths(12)} | Select @{n='Username'; e={$_.SamAccountName}}, @{n='Account Expiration Date'; e={$_.AccountExpirationDate}}, @{n='Enabled'; e={$_.Enabled}}`
 - **Privileged access to systems and applications is disabled after 45 days of inactivity.**
   - Microsoft provides [guidance on the use of PowerShell](https://learn.microsoft.com/en-au/services-hub/unified/health/remediation-steps-ad/regularly-check-for-and-remove-inactive-user-accounts-in-active-directory) in order to identify inactive user accounts based on when they were last used to logon to a system. Ask for a screenshot of the output of the following PowerShell command that checks for inactive user accounts to demonstrate that this activity takes place on a daily basis:
-  - <pre><code>Get-ADUser -Filter {(admincount -eq 1) -and (enabled -eq $true)} -Properties LastLogonDate- **Privileged operating environments are not virtualised within unprivileged operating environments.**
-  - Discuss how privileged operating environments have been implemented for the management of the system. It should align to one of the implementation scenarios within the context section of this mitigation strategy and be covered within the security documentation for the system.- **Administrative activities are conducted through jump servers.**
+  - `Get-ADUser -Filter {(admincount -eq 1) -and (enabled -eq $true)} -Properties LastLogonDate | Where-Object {$_.LastLogonDate -lt (Get-Date).AddDays(-45) -and $_.LastLogonDate -ne $null} | Select @{n='Username'; e={$_.samaccountname}}, @{n='Last Logon Date'; e={$_.LastLogonDate}}, @{n='Enabled'; e={$_.enabled}}`
+
+- **Privileged operating environments are not virtualised within unprivileged operating environments.**
+  - Discuss how privileged operating environments have been implemented for the management of the system. It should align to one of the implementation scenarios within the context section of this mitigation strategy and be covered within the security documentation for the system.
+
+- **Administrative activities are conducted through jump servers.**
   - Tools such as [BloodHound](https://www.sans.org/blog/bloodhound-sniffing-out-path-through-windows-domains/) can be used to determine the path administrators are using to logon and which servers are jump servers.
   - Request a system administrator demonstrate creating and removing a test user account to confirm the use of jump servers.
-  - Discuss the network structure for the system to determine if jump servers have been implemented for administrative activities. This should be visible in network diagrams for the system.- **Credentials for break glass accounts, local administrator accounts and service accounts are long, unique, unpredictable and managed.**
+  - Discuss the network structure for the system to determine if jump servers have been implemented for administrative activities. This should be visible in network diagrams for the system.
+
+- **Credentials for break glass accounts, local administrator accounts and service accounts are long, unique, unpredictable and managed.**
   - Discuss how break glass accounts, local administrator accounts and service accounts are managed. Confirm that Microsoft’s [Local Administrator Password Solution](https://www.microsoft.com/en-au/download/details.aspx?id=46899), or another suitable approach that results in long, unique and unpredictable passwords for each workstation and server, is used.
   - To check if all computers have LAPS configured, run the following PowerShell commands and compare the output:
-  - <pre><code>Get-ADComputer -Filter {ms-Mcs-AdmPwdExpirationTime -like "*"} -Properties ms-Mcs-AdmPwdExpirationTime
-  - Discuss how [group Managed Service Accounts](https://learn.microsoft.com/en-au/entra/architecture/service-accounts-group-managed) (gMSAs) are managed. gMSAs are domain user accounts that use 240-byte randomly generated complex passwords. gMSAs shift password management to the Microsoft Windows operating system, which changes the password every 30 days.- **Privileged access events are centrally logged.**
+  - `Get-ADComputer -Filter {ms-Mcs-AdmPwdExpirationTime -like "*"} -Properties ms-Mcs-AdmPwdExpirationTime | measure` and `Get-ADComputer -Filter {Enabled -eq $true} | measure`
+  - Discuss how [group Managed Service Accounts](https://learn.microsoft.com/en-au/entra/architecture/service-accounts-group-managed) (gMSAs) are managed. gMSAs are domain user accounts that use 240-byte randomly generated complex passwords. gMSAs shift password management to the Microsoft Windows operating system, which changes the password every 30 days.
+
+- **Privileged access events are centrally logged.**
   - Within the RSoP report, look for the ‘Audit Sensitive Privilege Use’ setting at ‘Computer Configuration\Policies\Windows Settings\Security Settings\Advanced Audit Policy Configuration\Audit Policies\Privilege Use\’. It should be enabled with a value of ‘Success and Failure’.
   - In addition, look for the ‘Audit Logon’, ‘Audit Other Logon/Logoff Events’ and ‘Audit Special Logon’ settings at ‘Computer Configuration\Policies\Windows Settings\Security Settings\Advanced Audit Policy Configuration\Audit Policies\Logon/Logoff’. They should be enabled with a value of ‘Success and Failure’.
   - Furthermore, look for the ‘Audit Logoff’ setting at ‘Computer Configuration\Policies\Windows Settings\Security Settings\Advanced Audit Policy Configuration\Audit Policies\Logon/Logoff’. It should be enabled with a value of ‘Success’.
-  - Finally, determine if these event logs are being centrally stored.- **Privileged user account and security group management events are centrally logged.**
+  - Finally, determine if these event logs are being centrally stored.
+
+- **Privileged user account and security group management events are centrally logged.**
   - Leveraging related Windows Event IDs, check whether changes to privileged user accounts and groups are logged. In addition, determine if these event logs are being centrally stored.
   - More information on security operations for privileged user accounts in Active Directory, including related Windows Event IDs, is [available from Microsoft](https://learn.microsoft.com/en-au/entra/architecture/security-operations-privileged-accounts).
   - Within the RSoP report, look for the ‘Audit Computer Account Management’ and ‘Audit User Account Management’ settings at ‘Computer Configuration\Policies\Windows Settings\Security Settings\Advanced Audit Policy Configuration\Audit Policies\Account Management\’. They should be enabled with a value of ‘Success and Failure’.
-  - In addition, look for the ‘Audit Security Group Management’ setting at ‘Computer Configuration\Policies\Windows Settings\Security Settings\Advanced Audit Policy Configuration\Audit Policies\Account Management\’. It should be enabled with a value of ‘Success and Failure’.- **Event logs are protected from unauthorised modification and deletion.**
-  - Discuss whether a SIEM, or equivalent solution, is used to protect event logs from unauthorised modification and deletion.- **Event logs from internet-facing servers are analysed in a timely manner to detect cybersecurity events.**
-  - Discuss whether SOC analysts monitor event logs for signs of compromise (i.e. security events).- **Cybersecurity events are analysed in a timely manner to identify cybersecurity incidents.**
+  - In addition, look for the ‘Audit Security Group Management’ setting at ‘Computer Configuration\Policies\Windows Settings\Security Settings\Advanced Audit Policy Configuration\Audit Policies\Account Management\’. It should be enabled with a value of ‘Success and Failure’.
+
+- **Event logs are protected from unauthorised modification and deletion.**
+  - Discuss whether a SIEM, or equivalent solution, is used to protect event logs from unauthorised modification and deletion.
+
+- **Event logs from internet-facing servers are analysed in a timely manner to detect cybersecurity events.**
+  - Discuss whether SOC analysts monitor event logs for signs of compromise (i.e. security events).
+
+- **Cybersecurity events are analysed in a timely manner to identify cybersecurity incidents.**
   - Discuss how security events are analysed by SOC analysts to determine whether a cybersecurity incident has occurred.
-  - Reviewing an organisation’s cybersecurity incident register may also provide evidence of the analysis of cybersecurity events in order to identify cybersecurity incidents.- **Cybersecurity incidents are reported to the chief information security officer, or one of their delegates, as soon as possible after they occur or are discovered.**
-  - Discuss to what extent cybersecurity incidents are reported to an organisation’s chief information security officer, or one of their delegates, after they occur or are discovered. Determine whether typical reporting timeframes are reasonable (i.e. is reporting occurring as soon as possible).- **Cybersecurity incidents are reported to ASD as soon as possible after they occur or are discovered.**
-  - Discuss to what extent cybersecurity incidents are reported to ASD after they occur or are discovered. Determine whether typical reporting timeframes are reasonable (i.e. is reporting occurring as soon as possible).- **Following the identification of a cybersecurity incident, the cybersecurity incident response plan is enacted.**
+  - Reviewing an organisation’s cybersecurity incident register may also provide evidence of the analysis of cybersecurity events in order to identify cybersecurity incidents.
+
+- **Cybersecurity incidents are reported to the chief information security officer, or one of their delegates, as soon as possible after they occur or are discovered.**
+  - Discuss to what extent cybersecurity incidents are reported to an organisation’s chief information security officer, or one of their delegates, after they occur or are discovered. Determine whether typical reporting timeframes are reasonable (i.e. is reporting occurring as soon as possible).
+
+- **Cybersecurity incidents are reported to ASD as soon as possible after they occur or are discovered.**
+  - Discuss to what extent cybersecurity incidents are reported to ASD after they occur or are discovered. Determine whether typical reporting timeframes are reasonable (i.e. is reporting occurring as soon as possible).
+
+- **Following the identification of a cybersecurity incident, the cybersecurity incident response plan is enacted.**
   - Request access to a copy of the cybersecurity incident response plan for the system. Discuss to what extent it is followed following a cybersecurity incident.
 ### **Application control**
 

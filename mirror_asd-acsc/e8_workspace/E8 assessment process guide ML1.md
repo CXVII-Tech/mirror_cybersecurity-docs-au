@@ -158,14 +158,18 @@ The section below provides guidance tailored to the assessment method. When sele
   - Request copies of forms, support tickets or emails provided by users requesting privileged access to systems, applications or data repositories along with the support of their supervisor or either an application owner or data repository owner. This can then be compared to screenshots of user accounts with privileged access to determine if there are any discrepancies.
 
 - **Privileged user accounts (excluding those explicitly authorised to access online services) are prevented from accessing the internet, email and web services.**
-  - Attempt to browse the internet as a privileged user, review the internet proxy on the network to determine whether it is configured to block traffic from privileged user accounts. In addition, run the below PowerShell command to check if privileged user accounts have access to mailboxes and email addresses:
-  - <pre><code>Get-ADUser -Filter {(admincount -eq 1) -and (emailaddress -like "*") -and (enabled -eq $true)} -Properties EmailAddress
- Select samaccountname, emailaddress</code></pre> |
+  - Attempt to browse the internet as a privileged user, review the internet proxy on the network to determine whether it is configured to block traffic from privileged user accounts. In addition, run the below PowerShell command to check if privileged user accounts have access to mailboxes and email addresses: `Get-ADUser -Filter {(admincount -eq 1) -and (emailaddress -like "*") -and (enabled -eq $true)} -Properties EmailAddress | Select samaccountname, emailaddress`
 - **Privileged user accounts explicitly authorised to access online services are strictly limited to only what is required for users and services to undertake their duties.**
-  - In cases where privileged user accounts have been explicitly authorised to access online services, such as for the management of cloud services, determine to what extent they are limited from accessing all other online services over the internet.- **Privileged users use separate privileged and unprivileged operating environments.**
-  - Discuss how privileged operating environments have been implemented for the management of the system. Note, at this maturity level there are no constraints on how this can be implemented beyond that separate privileged and unprivileged operating environments have been implemented.- **Unprivileged user accounts cannot logon to privileged operating environments.**
+  - In cases where privileged user accounts have been explicitly authorised to access online services, such as for the management of cloud services, determine to what extent they are limited from accessing all other online services over the internet.
+
+- **Privileged users use separate privileged and unprivileged operating environments.**
+  - Discuss how privileged operating environments have been implemented for the management of the system. Note, at this maturity level there are no constraints on how this can be implemented beyond that separate privileged and unprivileged operating environments have been implemented.
+
+- **Unprivileged user accounts cannot logon to privileged operating environments.**
   - Attempt to logon to a privileged operating environment using a standard user account.
-  - [BloodHound](https://www.sans.org/blog/bloodhound-sniffing-out-path-through-windows-domains/) can be used to assess whether any unprivileged user accounts have connected to privileged operating environments by looking for cached credentials.- **Privileged user accounts (excluding local administrator accounts) cannot logon to unprivileged operating environments.**
+  - [BloodHound](https://www.sans.org/blog/bloodhound-sniffing-out-path-through-windows-domains/) can be used to assess whether any unprivileged user accounts have connected to privileged operating environments by looking for cached credentials.
+
+- **Privileged user accounts (excluding local administrator accounts) cannot logon to unprivileged operating environments.**
   - Request a demonstration of a privileged user account attempting to logon to an unprivileged operating environment. Note, this test should be done using a privileged user account set up specifically for this purpose. The privileged user account should then be removed immediately after testing is complete.
   - [BloodHound](https://www.sans.org/blog/bloodhound-sniffing-out-path-through-windows-domains/) can be used to assess whether any privileged user accounts have connected to unprivileged operating environments by looking for cached credentials.
 ### **Application control**
