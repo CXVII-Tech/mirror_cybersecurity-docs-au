@@ -43,16 +43,16 @@
 |  |  | Review evidence of valid use of this system, such as service requests or support tickets. Look for evidence of this solution being bypassed, such as users in privileged groups for extended periods of time. Ensure the system configuration meets the intent of this control, such as limiting who can receive privileged access. |  |
 | ML3-RA-04 | Memory integrity functionality is enabled. | Check the registry setting at *HKLM:\SYSTEM\CurrentControlSet\Control\* *DeviceGuard\Scenarios\HypervisorEnforcedCodeIntegrity\* and confirm that Enabled is set to 0 or 1. |  |
 |  |  | E8MVT is able to check the registry setting for this control. |  |
-|  |  | *Get-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\ DeviceGuard\Scenarios\HypervisorEnforcedCodeIntegrity\" | Select-Object -Property Enabled* |  |
+|  |  | `Get-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\ DeviceGuard\Scenarios\HypervisorEnforcedCodeIntegrity\" \| Select-Object -Property Enabled` |  |
 | ML3-RA-05 | Local Security Authority protection functionality is enabled. | Check the registry setting at *HKLM:\SYSTEM\CurrentControlSet\Control\LSA\* and confirm that RunAsPPL is set to 1 or 2. |  |
 |  |  | E8MVT is able to check the registry setting for this control. |  |
-|  |  | *Get-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\LSA\" | Select-Object -Property RunAsPPL* |  |
+|  |  | `Get-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\LSA\" \| Select-Object -Property RunAsPPL` |  |
 | ML3-RA-06 | Credential Guard functionality is enabled. | Check the registry setting at *HKLM:\SYSTEM\CurrentControlSet\Control\LSA\* and confirm that LsaCfgFlags is set to 1 or 2. |  |
 |  |  | E8MVT is able to check the registry setting for this control. |  |
-|  |  | *Get-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\LSA\" | Select-Object -Property lsacfgflags* |  |
+|  |  | `Get-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\LSA\" \| Select-Object -Property lsacfgflags` |  |
 | ML3-RA-07 | Remote Credential Guard functionality is enabled. | Check the registry setting at *HKLM:\SYSTEM\CurrentControlSet\Control\LSA\* and confirm that DisableRestrictedAdmin is set to 0. |  |
 |  |  | E8MVT is able to check the registry setting for this control. |  |
-|  |  | *Get-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\LSA\" | Select-Object -Property DisabledRestrictedAdmin* |  |
+|  |  | `Get-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\LSA\" \| Select-Object -Property DisabledRestrictedAdmin` |  |
 | ML3-RA-08 | Event logs from non-internet-facing servers are analysed in a timely manner to detect cybersecurity events. | Verify the organisation has responded to a sign of compromise in a non-internet-facing server trigged by monitoring activities. This evidence will typically exist as support tickets, email correspondence or threat and risk assessments. |  |
 | ML3-RA-09 | Event logs from workstations are analysed in a timely manner to detect cybersecurity events. | Verify the organisation has responded to a sign of compromise in a workstation trigged by monitoring activities. This evidence will typically exist as support tickets, email correspondence or threat and risk assessments. |  |
 
@@ -80,7 +80,7 @@
 | ML3-RM-03 | Only privileged users responsible for checking that Microsoft Office macros are free of malicious code can write to and modify content within Trusted Locations. | If Trusted Locations are used by the organisation, verify that a process exists for controlling write access to these locations. |  |
 |  |  | Trusted Locations for each Microsoft Office application can be obtained from the registry at *HKCU:\software\microsoft\office\<version>\<product>\security\trusted locations*. |  |
 |  |  | The following PowerShell command can be used to obtain a list of Trusted Locations. |  |
-|  |  | *Get-ItemProperty -Path "HKCU:\SOFTWARE\policies\microsoft\office\<version>\<product>\security\trusted locations"* |  |
+|  |  | `Get-ItemProperty -Path "HKCU:\SOFTWARE\policies\microsoft\office\<version>\<product>\security\trusted locations"` |  |
 |  |  | As a standard user attempt to write a file to each of these locations. |  |
 |  |  | E8MVT will find configured Trusted Locations and attempt to write a file to each location. |  |
 | ML3-RM-04 | Microsoft Office macros digitally signed by an untrusted publisher cannot be enabled via the Message Bar or Backstage View. | Attempt to execute Microsoft Office macros in a Microsoft Office file signed by an untrusted publisher. |  |
@@ -89,12 +89,12 @@
 |  |  | Check the following registry entry for each Microsoft Office application to confirm that the TCID19092 value has been set. |  |
 |  |  | *HKCU\SOFTWARE\Policies\Microsoft\office\<version>\<product>\disabledcmdbaritemslist* |  |
 |  |  | The following PowerShell commands can also be used. |  |
-|  |  | *Get-ItemProperty -Path "HKCU:\SOFTWARE\Policies\Microsoft\office\16.0\Common\TrustCenter\" | Select-Object -Property trustbar* |  |
-|  |  | *Get-ItemProperty -Path "HKCU:\SOFTWARE\Policies\Microsoft\office\<version>\<product>\" | Select-Object -Property disabledcmdbaritemslist* |  |
-|  |  | For example: *Get-ItemProperty -Path "HKCU:\SOFTWARE\Policies\Microsoft\office\16.0\word\" | Select-Object -Property disabledcmdbaritemslist* |  |
+|  |  | `Get-ItemProperty -Path "HKCU:\SOFTWARE\Policies\Microsoft\office\16.0\Common\TrustCenter\" \| Select-Object -Property trustbar` |  |
+|  |  | `Get-ItemProperty -Path "HKCU:\SOFTWARE\Policies\Microsoft\office\<version>\<product>\" \| Select-Object -Property disabledcmdbaritemslist` |  |
+|  |  | For example: `Get-ItemProperty -Path "HKCU:\SOFTWARE\Policies\Microsoft\office\16.0\word\" \| Select-Object -Property disabledcmdbaritemslist` |  |
 | ML3-RM-05 | Microsoft Office macros digitally signed by signatures other than V3 signatures cannot be enabled via the Message Bar or Backstage View. | If digital signatures are used by the organisation, verify that only V3 signatures are supported. |  |
 |  |  | The following PowerShell command be used to confirm this. |  |
-|  |  | `Get-ItemProperty -Path "HKCU:\SOFTWARE\Policies\Microsoft\VBA\security\" | Select-Object -Property onlytrustvbasignaturev3` |  |
+|  |  | `Get-ItemProperty -Path "HKCU:\SOFTWARE\Policies\Microsoft\VBA\security\" \| Select-Object -Property onlytrustvbasignaturev3` |  |
 | ML3-RM-06 | Microsoft Office's list of trusted publishers is validated on an annual or more frequent basis. | If digital signatures are used by the organisation, verify that a process is in place to regularly review this list to allow/remove trusted publishers. Request evidence of an annual validation having taken place. |  |
 |  |  | Ideally, the organisation should re-sign all approved Microsoft Office macros obtained from external parties, after appropriate checks have taken place, and only list certificates they control within the trusted publishers list. |  |
 
