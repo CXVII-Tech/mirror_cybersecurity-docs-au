@@ -82,18 +82,18 @@ For a system owner to claim they have implemented a mitigation strategy, all con
 Where exceptions to a mitigation strategy’s controls have been identified, the assessor should review and evaluate any compensating controls that are in place to determine whether they address the intent of the original controls and are implemented effectively. Two examples have been provided below.
 
 > Example: During an internal review, an organisation identified a low-risk Microsoft Windows server that could not be patched. As a result, the organisation implemented a plan to decommission the server within two months.
-> 
-> 
+>
+>
 > In this situation, it was still important for the organisation to apply compensating controls to reduce the identified risk to an acceptable level, and to align with the requirements of the Essential Eight’s exception process. As a result, a risk owner was assigned and strong compensating controls were put in place.
-> 
+>
 > In this instance, as the exception was being effectively managed and strong compensating controls had been put in place, an assessor determined that the exception should not preclude the organisation from reaching their target maturity level. Conversely, if the organisation had not applied strong compensating controls, it would not have aligned with the requirements of the Essential Eight’s exception process and should have been precluded from reaching their target maturity level.
-> 
+>
 
 > Example: During an internal review, an organisation identified a cloud service that did not have multi-factor authentication functionality enabled. In assessing the situation, the organisation decided it was not worth the time and effort to enable such functionality, not to mention the complaints they expected they would receive from users. As such, the organisation chose to simply accept the risk of not implementing a control rather than implementing strong compensating controls.
-> 
-> 
+>
+>
 > In this instance, as the exception was not being effectively managed, nor were strong compensating controls in place, an assessor determined that the organisation should be precluded from reaching their target maturity level.
-> 
+>
 
 It is important that the use of exceptions for a system are documented and approved by an appropriate authority through a formal process. Documentation for exceptions should include the following:
 
