@@ -31,9 +31,9 @@ This publication provides a mapping between the [*Essential Eight maturity mode
 
 ## **Mapping between the *Essential Eight maturity model* and the ISM**
 
-- [E8MM and ISM Mapping (CSV)](E8MM%20and%20ISM%20Mapping.csv)
-- [E8MM and ISM Mapping (Markdown)](E8MM%20and%20ISM%20mapping.md)
-- [E8MM and ISM Mapping (JSON)](e8mm_ism_mapping.json)
+- [Mapping in CSV](e8mm_ism_mapping.csv)
+- [Mapping in Markdown](e8mm_ism_mapping.md)
+- [Mapping in JSON](e8mm_ism_mapping.json)
 
 ### Maturity Level One
 
