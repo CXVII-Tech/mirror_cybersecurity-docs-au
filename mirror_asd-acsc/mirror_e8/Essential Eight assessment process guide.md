@@ -320,45 +320,29 @@ Finally, at this maturity level, organisations may choose to implement multi-fac
 
 The section below provides guidance tailored to the assessment method. When selecting a method, the quality of the evidence provided by each method should be strongly considered.
 
-- Control: Multi-factor authentication is used to authenticate privileged users of systems.
+- Control: Multi-factor authentication is used to authenticate users to their organisation’s online services that process, store or communicate their organisation’s sensitive data.
     - Assessment Guidance (ordered by effectiveness):
-        - Observe a privileged user authenticating to a workstation. Check whether they are required to use multi-factor authentication. Alternatively, request evidence of the logon screen for a privileged user. The logon screen should show multiple authentication methods being requested.
-- Control: Multi-factor authentication is used to authenticate unprivileged users of systems.
+        - Attempt to logon to an organisation’s own online services that users access. Typically, the logon screen will show a request for two or more authentication factors, such as a password and an OTP. Note, in some cases an online service may request the second authentication factor after the first authentication factor has been validated.
+        - Organisations might only share their primary login portal and may not disclose any other portals that may not have MFA in place. As such, assessors should determine if any additional authentication portals are exposed to the internet.
+- Control: Multi-factor authentication is used to authenticate users to third-party online services that process, store or communicate their organisation’s sensitive data.
     - Assessment Guidance (ordered by effectiveness):
-        - Observe an unprivileged user authenticating to a workstation. Check whether they are required to use multi-factor authentication. Alternatively, request evidence of the logon screen for an unprivileged user. The logon screen should show multiple authentication methods being requested.
-- Control: Multi-factor authentication used for authenticating users of online services is phishing-resistant.
+        - Attempt to logon to third-party online services that users access. In cases where multi-factor authentication is not used, confirm that the vendor or service provider does not offer that functionality.
+- Control: Multi-factor authentication (where available) is used to authenticate users to third-party online services that process, store or communicate their organisation’s non-sensitive data.
     - Assessment Guidance (ordered by effectiveness):
-        - Observe both unprivileged and privileged users authenticating to their organisation’s online services that process, store or communicate their organisation’s sensitive data, as well as third-party online services that process, store or communicate their organisation’s sensitive or non-sensitive data. Check whether they are required to use a phishing-resistant form of multi-factor authentication, such as a security key, smart card or passkey.
-- Control: Multi-factor authentication used for authenticating customers of online customer services provides a phishing-resistant option.
+        - Attempt to logon to third-party online services that users access. In cases where multi-factor authentication is not used, confirm that the vendor or service provider does not offer that functionality.
+- Control: Multi-factor authentication is used to authenticate users to their organisation’s online customer services that process, store or communicate their organisation’s sensitive customer data.
     - Assessment Guidance (ordered by effectiveness):
-        - Observe security settings for a customer’s user account relating to any of the organisation’s online customer services that process, store or communicate sensitive customer data, as well as any third-party online customer services that process, store or communicate sensitive customer data. Check whether there is the ability to configure authentication settings to use a phishing-resistant form of multi-factor authentication, such as a security key, smart card or passkey.
-- Control: Multi-factor authentication used for authenticating users of systems is phishing-resistant.
+        - Attempt to logon to an organisation’s own online customer services that users access. In cases where multi-factor authentication is not used, confirm that such functionality is not offered.
+- Control: Multi-factor authentication is used to authenticate users to third-party online customer services that process, store or communicate their organisation’s sensitive customer data.
     - Assessment Guidance (ordered by effectiveness):
-        - Observe an unprivileged and privileged user authenticating to a workstation. Check whether they are required to use a phishing-resistant form of multi-factor authentication, such as a security key, smart card or passkey.
-        - Observe a privileged user authenticating to a server. Check whether they are required to use a phishing-resistant form of multi-factor authentication, such as a security key, smart card, or passkey.
-- Control: Successful and unsuccessful multi-factor authentication events are centrally logged.
+        - Attempt to logon to third-party online customer services that users access. In cases where multi-factor authentication is not used, confirm that the vendor or service provider does not offer that functionality.
+- Control: Multi-factor authentication is used to authenticate customers to online customer services that process, store or communicate sensitive customer data.
     - Assessment Guidance (ordered by effectiveness):
-        - Within the RSoP report, look for the ’Audit Logon’ and ’Audit Special Logon’ settings at ’Computer Configuration\Policies\Windows Settings\Security Settings\Advanced Audit Policy Configuration\Audit Policies\Logon/Logoff\’. They should be enabled with a value of ’Success and Failure’. In addition, determine if these event logs are being centrally stored.
-        - For certain MFA implementations, the above guidance may not be applicable. In these instances, discuss whether logging is available for all systems that users authenticate to and seek evidence that such logging is in place.
-- Control: Event logs are protected from unauthorised modification and deletion.
+        - Attempt to logon to online customer services that customers (e.g. citizens) access. Discuss whether multi-factor authentication is setup as part of user account creation or whether customers need to set it up themselves after initial user account creation.
+- Control: Multi-factor authentication uses either: something users have and something users know, or something users have that is unlocked by something users know or are.
     - Assessment Guidance (ordered by effectiveness):
-        - Discuss whether a SIEM, or equivalent solution, is used to protect event logs from unauthorised modification and deletion.
-- Control: Event logs from internet-facing servers are analysed in a timely manner to detect cybersecurity events.
-    - Assessment Guidance (ordered by effectiveness):
-        - Discuss whether security operations centre (SOC) analysts monitor event logs for signs of compromise (i.e. security events).
-- Control: Cybersecurity events are analysed in a timely manner to identify cybersecurity incidents.
-    - Assessment Guidance (ordered by effectiveness):
-        - Discuss how security events are analysed by SOC analysts to determine whether a cybersecurity incident has occurred.
-        - Reviewing an organisation’s cybersecurity incident register may also provide evidence of the analysis of cybersecurity events in order to identify cybersecurity incidents.
-- Control: Cybersecurity incidents are reported to the chief information security officer, or one of their delegates, as soon as possible after they occur or are discovered.
-    - Assessment Guidance (ordered by effectiveness):
-        - Discuss to what extent cybersecurity incidents are reported to an organisation’s chief information security officer, or one of their delegates, after they occur or are discovered. Determine whether typical reporting timeframes are reasonable (i.e. is reporting occurring as soon as possible).
-- Control: Cybersecurity incidents are reported to ASD as soon as possible after they occur or are discovered.
-    - Assessment Guidance (ordered by effectiveness):
-        - Discuss to what extent cybersecurity incidents are reported to ASD after they occur or are discovered. Determine whether typical reporting timeframes are reasonable (i.e. is reporting occurring as soon as possible).
-- Control: Following the identification of a cybersecurity incident, the cybersecurity incident response plan is enacted.
-    - Assessment Guidance (ordered by effectiveness):
-        - Request access to a copy of the cybersecurity incident response plan for the system. Discuss to what extent it is followed following a cybersecurity incident.
+        - Discuss the implementation of multi-factor authentication for users and customers. Note, multiple different forms of multi-factor authentication may exist depending on the number of different systems and online services that are being authenticated to. For example, multi-factor authentication for administration of cloud services might involve a different implementation to multi-factor authentication for administration of on-premises services. Furthermore, not all third-party online services may offer the same multi-factor authentication implementation.
+        - Discussions should also include distinguishing between multi-step authentication and multi-factor authentication, as well as different levels of security provided by different multi-factor authentication implementations. For example, a security key, smart card or passkey is more secure than a hardware OTP device which is more secure than an OTP mobile app which is more secure than a push notification or SMS code sent to a smartphone.
 
 ### **Restrict administrative privileges**
 
