@@ -47,8 +47,8 @@ The section below provides guidance tailored to the assessment method. When sele
 | Patches, updates or other vendor mitigations for vulnerabilities in firmware are applied within 48 hours of release when vulnerabilities are assessed as critical by vendors or when working exploits exist. | Use the relevant guidance provided in Maturity Level One of this guide and apply 48 hour timeframes when vulnerabilities are assessed as critical by vendors or when working exploits exist. |
 | Patches, updates or other vendor mitigations for vulnerabilities in firmware are applied within one month of release when vulnerabilities are assessed as non-critical by vendors and no working exploits exist. | Use the relevant guidance provided in Maturity Level One of this guide when vulnerabilities are assessed as non-critical by vendors and no working exploits exist. |
 | The latest release, or the previous release, of operating systems are used. | A network-based vulnerability scanner can be used to identify operating systems and their versions. The output of these tools can then be used to check against the latest operating system versions available from vendors. |
-|  | For Microsoft Windows workstations and servers, the ‘winver’ command can be run to determine the version of the operating system. Request a screenshot of the output of running this command for servers and workstations (assuming a SOE is used for workstations).
-For Linux workstations and servers, the ‘cat /etc/os-release’ command can be run to determine the version of the operating system. Request a screenshot of the output of running this command for servers and workstations (assuming a SOE is used for workstations). This version can then be checked against release information for the Linux distribution being used to determine whether it is a supported version or not. |
+|  | For Microsoft Windows workstations and servers, the ‘winver’ command can be run to determine the version of the operating system. Request a screenshot of the output of running this command for servers and workstations (assuming a SOE is used for workstations). |
+|  | For Linux workstations and servers, the ‘cat /etc/os-release’ command can be run to determine the version of the operating system. Request a screenshot of the output of running this command for servers and workstations (assuming a SOE is used for workstations). This version can then be checked against release information for the Linux distribution being used to determine whether it is a supported version or not. |
 
 ### **Multi-factor authentication**
 
@@ -137,11 +137,11 @@ The section below provides guidance tailored to the assessment method. When sele
 | --- | --- |
 | Only Microsoft Office macros running from within a sandboxed environment, a Trusted Location or that are digitally signed by a trusted publisher are allowed to execute. | Within the RSoP report, look for the ‘VBA Macro Notification Settings’ setting at ‘User Configuration\Policies\Administration Templates\<Microsoft Office Application>\Application Settings\Security\Trust Center\’. It should be enabled and configured to ‘Disable all macros without notification’ (if Trusted Locations are used) or ‘Disable all macros except digitally signed macros’ (if digitally signed Microsoft Office macros are used).
 Note, an organisation may choose to use a combination of Trusted Locations and digitally signed Microsoft Office macros. However, if only digitally signed Microsoft Office macros are used then Trusted Locations should be disabled. |
-|  | Within each Microsoft Office application, request a screenshot showing Trust Center macro settings (File – Options – Trust Center – Trust Center Settings – Macro Settings). In addition, request a screenshot showing Trust Center trusted publisher settings (File – Options – Trust Center – Trust Center Settings – Trusted Publishers).
-For the assessment of Microsoft Office macro security, identify what setting is selected for ‘macro settings’. The setting should either be set to ‘Disable all macros without notification’ (if Trusted Locations are used) or ‘Disable all macros except digitally signed macros’ (if digitally signed Microsoft Office macros are used). For the assessment of Trusted Locations, check whether the ‘Disable all trusted locations’ option has been checked or not. If it has not, then Trusted Locations are enabled and should be individually assessed for their suitability. |
+|  | Within each Microsoft Office application, request a screenshot showing Trust Center macro settings (File – Options – Trust Center – Trust Center Settings – Macro Settings). In addition, request a screenshot showing Trust Center trusted publisher settings (File – Options – Trust Center – Trust Center Settings – Trusted Publishers). |
+|  | For the assessment of Microsoft Office macro security, identify what setting is selected for ‘macro settings’. The setting should either be set to ‘Disable all macros without notification’ (if Trusted Locations are used) or ‘Disable all macros except digitally signed macros’ (if digitally signed Microsoft Office macros are used). For the assessment of Trusted Locations, check whether the ‘Disable all trusted locations’ option has been checked or not. If it has not, then Trusted Locations are enabled and should be individually assessed for their suitability. |
 | Microsoft Office macros are checked to ensure they are free of malicious code before being digitally signed or placed within Trusted Locations. | Identify users that are responsible for the management of Microsoft Office macros. Discuss with them the processes and procedures that are used to check whether Microsoft Office macros are free of malicious code before they are either digitally signed to placed within Trusted Locations. |
-| Only privileged users responsible for checking that Microsoft Office macros are free of malicious code can write to and modify content within Trusted Locations. | For each Trusted Location that is specified, review the effective file system permissions for that location. If able to, review file system permissions themselves rather than requesting a screenshot.
-Check the total number of users who are in user groups that have the relevant file system permissions to make changes to content in Trusted Locations. |
+| Only privileged users responsible for checking that Microsoft Office macros are free of malicious code can write to and modify content within Trusted Locations. | For each Trusted Location that is specified, review the effective file system permissions for that location. If able to, review file system permissions themselves rather than requesting a screenshot. |
+|  | Check the total number of users who are in user groups that have the relevant file system permissions to make changes to content in Trusted Locations. |
 | Microsoft Office macros digitally signed by an untrusted publisher cannot be enabled via the Message Bar or Backstage View. | Within the RSoP report, look for the ‘Disable all Trust Bar notifications for security issues’ setting at ‘User Configuration\Policies\Administration Templates\Microsoft Office 2016\Security Settings\’. It should be enabled.
 In addition, look for the ‘Disable commands’ setting at ‘User Configuration\Policies\Administration Templates\<Microsoft Office Application>\Disable Items in User Interface\Custom\’. It should be enabled with a value of ‘Enter a command bar ID to disable: 19092’. |
 | Microsoft Office macros digitally signed by signatures other than V3 signatures cannot be enabled via the Message Bar or Backstage View. | Within the RSoP report, look for the ‘Only trust VBA macros that use V3 signatures’ setting at ‘User Configuration\Policies\Administration Templates\Microsoft Office 2016\Security Settings\Trust Centre\’. It should be enabled. |
@@ -163,17 +163,22 @@ The section below provides guidance tailored to the assessment method. When sele
 
 | Control | Assessment Guidance (ordered by effectiveness) |
 | --- | --- |
-| .NET Framework 3.5 (includes .NET 2.0 and 3.0) is disabled or removed. | Request a screenshot of the ‘Windows Features’ that are installed.
-For Microsoft Windows 11, this can be accessed via (Settings – Apps – Optional features – More Windows features).
-For Microsoft Windows 10, this can be accessed via (Settings – Apps & features – Programs and Features – Turn Windows features on or off).
-Check which of the .NET Frameworks are installed by checking for a tick or black square. Note, enabling .NET Framework 3.5 will automatically enable PowerShell 2.0. |
-| Windows PowerShell 2.0 is disabled or removed. | Request a screenshot of the ‘Windows Features’ that are installed.
-For Microsoft Windows 11, this can be accessed via (Settings – Apps – Optional features – More Windows features).
-For Microsoft Windows 10, this can be accessed via (Settings – Apps & features – Programs and Features – Turn Windows features on or off).
-Check if legacy versions of PowerShell are installed by checking for a tick or black square against ‘Windows PowerShell 2.0’. To check if a downgrade to PowerShell 2.0 is available, run the following PowerShell command:
-*Get-WindowsOptionalFeature -online | Where-Object {$_.FeatureName -match "PowerShellv2"}* |
-| PowerShell is configured to use Constrained Language Mode. | Request a screenshot of the output of running the following PowerShell command: *$ExecutionContext.SessionState.LanguageMode*.
-If Constrained Language Mode is enabled, the output will be ‘ConstrainedLanguage’. Otherwise, the output will be ‘FullLanguage’. |
+| .NET Framework 3.5 (includes .NET 2.0 and 3.0) is disabled or removed. | Request a screenshot of the ‘Windows Features’ that are installed. |
+|  | For Microsoft Windows 11, this can be accessed via (Settings – Apps – Optional features – More Windows features). |
+|  | For Microsoft Windows 10, this can be accessed via (Settings – Apps & features – Programs and Features – Turn Windows features on or off). |
+|  | Check which of the .NET Frameworks are installed by checking for a tick or black square. Note, enabling .NET Framework 3.5 will automatically enable PowerShell 2.0. |
+| Windows PowerShell 2.0 is disabled or removed. | Request a screenshot of the ‘Windows Features’ that are installed. |
+|  | For Microsoft Windows 11, this can be accessed via (Settings – Apps – Optional features – More Windows features). |
+|  | For Microsoft Windows 10, this can be accessed via (Settings – Apps & features – Programs and Features – Turn Windows features on or off). |
+|  | Check if legacy versions of PowerShell are installed by checking for a tick or black square against ‘Windows PowerShell 2.0’. To check if a downgrade to PowerShell 2.0 is available, run the following PowerShell command: |
+|  | ```powershell
+Get-WindowsOptionalFeature -online | Where-Object {$_.FeatureName -match "PowerShellv2"}
+``` |
+| PowerShell is configured to use Constrained Language Mode. | Request a screenshot of the output of running the following PowerShell command:
+```powershell
+$ExecutionContext.SessionState.LanguageMode
+``` |
+|  | If Constrained Language Mode is enabled, the output will be ‘ConstrainedLanguage’. Otherwise, the output will be ‘FullLanguage’. |
 | Event logs from non-internet-facing servers are analysed in a timely manner to detect cybersecurity events. | Discuss whether SOC analysts monitor event logs for signs of compromise (i.e. security events). |
 | Event logs from workstations are analysed in a timely manner to detect cybersecurity events. | Discuss whether SOC analysts monitor event logs for signs of compromise (i.e. security events). |
 
