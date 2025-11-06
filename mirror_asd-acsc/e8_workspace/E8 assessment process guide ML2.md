@@ -16,10 +16,13 @@ At this maturity level, vulnerability scanning and patching requirements for add
 
 The section below provides guidance tailored to the assessment method. When selecting a method, the quality of the evidence provided by each method should be strongly considered.
 
-| Control | Assessment Guidance (ordered by effectiveness) |
-| --- | --- |
-| A vulnerability scanner is used at least fortnightly to identify missing patches or updates for vulnerabilities in applications other than office productivity suites, web browsers and their extensions, email clients, PDF software, and security products. | Use the guidance provided in Maturity Level One of this guide but apply it to applications other than office productivity suites, web browsers and their extensions, email clients, Portable Document Format (PDF) software, and security products using the identified timeframe. |
-| Patches, updates or other vendor mitigations for vulnerabilities in applications other than office productivity suites, web browsers and their extensions, email clients, PDF software, and security products are applied within one month of release. | Use the guidance provided in Maturity Level One of this guide but apply it to applications other than office productivity suites, web browsers and their extensions, email clients, PDF software, and security products using the identified timeframe. |
+**Assessment Guidance (ordered by effectiveness):**
+
+- **A vulnerability scanner is used at least fortnightly to identify missing patches or updates for vulnerabilities in applications other than office productivity suites, web browsers and their extensions, email clients, PDF software, and security products.**
+  - Use the guidance provided in Maturity Level One of this guide but apply it to applications other than office productivity suites, web browsers and their extensions, email clients, Portable Document Format (PDF) software, and security products using the identified timeframe.
+
+- **Patches, updates or other vendor mitigations for vulnerabilities in applications other than office productivity suites, web browsers and their extensions, email clients, PDF software, and security products are applied within one month of release.**
+  - Use the guidance provided in Maturity Level One of this guide but apply it to applications other than office productivity suites, web browsers and their extensions, email clients, PDF software, and security products using the identified timeframe.
 
 ### **Patch operating systems**
 
@@ -39,23 +42,46 @@ At this maturity level, event logs for multi-factor authentication events should
 
 The section below provides guidance tailored to the assessment method. When selecting a method, the quality of the evidence provided by each method should be strongly considered.
 
-| Control | Assessment Guidance (ordered by effectiveness) |
-| --- | --- |
-| Multi-factor authentication is used to authenticate privileged users of systems. | Observe a privileged user authenticating to a workstation. Check whether they are required to use multi-factor authentication. Alternatively, request evidence of the logon screen for a privileged user. The logon screen should show multiple authentication methods being requested. |
-| Multi-factor authentication is used to authenticate unprivileged users of systems. | Observe an unprivileged user authenticating to a workstation. Check whether they are required to use multi-factor authentication. Alternatively, request evidence of the logon screen for an unprivileged user. The logon screen should show multiple authentication methods being requested. |
-| Multi-factor authentication used for authenticating users of online services is phishing-resistant. | Observe both unprivileged and privileged users authenticating to their organisation’s online services that process, store or communicate their organisation’s sensitive data, as well as third-party online services that process, store or communicate their organisation’s sensitive or non-sensitive data. Check whether they are required to use a phishing-resistant form of multi-factor authentication, such as a security key, smart card or passkey. |
-| Multi-factor authentication used for authenticating customers of online customer services provides a phishing-resistant option. | Observe security settings for a customer’s user account relating to any of the organisation’s online customer services that process, store or communicate sensitive customer data, as well as any third-party online customer services that process, store or communicate sensitive customer data. Check whether there is the ability to configure authentication settings to use a phishing-resistant form of multi-factor authentication, such as a security key, smart card or passkey. |
-| Multi-factor authentication used for authenticating users of systems is phishing-resistant. | Observe an unprivileged and privileged user authenticating to a workstation. Check whether they are required to use a phishing-resistant form of multi-factor authentication, such as a security key, smart card or passkey. |
-|  | Observe a privileged user authenticating to a server. Check whether they are required to use a phishing-resistant form of multi-factor authentication, such as a security key, smart card, or passkey. |
-| Successful and unsuccessful multi-factor authentication events are centrally logged. | Within the RSoP report, look for the ‘Audit Logon’ and ‘Audit Special Logon’ settings at ‘Computer Configuration\Policies\Windows Settings\Security Settings\Advanced Audit Policy Configuration\Audit Policies\Logon/Logoff\’. They should be enabled with a value of ‘Success and Failure’. In addition, determine if these event logs are being centrally stored. |
-|  | For certain MFA implementations, the above guidance may not be applicable. In these instances, discuss whether logging is available for all systems that users authenticate to and seek evidence that such logging is in place. |
-| Event logs are protected from unauthorised modification and deletion. | Discuss whether a SIEM, or equivalent solution, is used to protect event logs from unauthorised modification and deletion. |
-| Event logs from internet-facing servers are analysed in a timely manner to detect cybersecurity events. | Discuss whether security operations centre (SOC) analysts monitor event logs for signs of compromise (i.e. security events). |
-| Cybersecurity events are analysed in a timely manner to identify cybersecurity incidents. | Discuss how security events are analysed by SOC analysts to determine whether a cybersecurity incident has occurred. |
-|  | Reviewing an organisation’s cybersecurity incident register may also provide evidence of the analysis of cybersecurity events in order to identify cybersecurity incidents. |
-| Cybersecurity incidents are reported to the chief information security officer, or one of their delegates, as soon as possible after they occur or are discovered. | Discuss to what extent cybersecurity incidents are reported to an organisation’s chief information security officer, or one of their delegates, after they occur or are discovered. Determine whether typical reporting timeframes are reasonable (i.e. is reporting occurring as soon as possible). |
-| Cybersecurity incidents are reported to ASD as soon as possible after they occur or are discovered. | Discuss to what extent cybersecurity incidents are reported to ASD after they occur or are discovered. Determine whether typical reporting timeframes are reasonable (i.e. is reporting occurring as soon as possible). |
-| Following the identification of a cybersecurity incident, the cybersecurity incident response plan is enacted. | Request access to a copy of the cybersecurity incident response plan for the system. Discuss to what extent it is followed following a cybersecurity incident. |
+**Assessment Guidance (ordered by effectiveness):**
+
+- **Multi-factor authentication is used to authenticate privileged users of systems.**
+  - Observe a privileged user authenticating to a workstation. Check whether they are required to use multi-factor authentication. Alternatively, request evidence of the logon screen for a privileged user. The logon screen should show multiple authentication methods being requested.
+
+- **Multi-factor authentication is used to authenticate unprivileged users of systems.**
+  - Observe an unprivileged user authenticating to a workstation. Check whether they are required to use multi-factor authentication. Alternatively, request evidence of the logon screen for an unprivileged user. The logon screen should show multiple authentication methods being requested.
+
+- **Multi-factor authentication used for authenticating users of online services is phishing-resistant.**
+  - Observe both unprivileged and privileged users authenticating to their organisation’s online services that process, store or communicate their organisation’s sensitive data, as well as third-party online services that process, store or communicate their organisation’s sensitive or non-sensitive data. Check whether they are required to use a phishing-resistant form of multi-factor authentication, such as a security key, smart card or passkey.
+
+- **Multi-factor authentication used for authenticating customers of online customer services provides a phishing-resistant option.**
+  - Observe security settings for a customer’s user account relating to any of the organisation’s online customer services that process, store or communicate sensitive customer data, as well as any third-party online customer services that process, store or communicate sensitive customer data. Check whether there is the ability to configure authentication settings to use a phishing-resistant form of multi-factor authentication, such as a security key, smart card or passkey.
+
+- **Multi-factor authentication used for authenticating users of systems is phishing-resistant.**
+  - Observe an unprivileged and privileged user authenticating to a workstation. Check whether they are required to use a phishing-resistant form of multi-factor authentication, such as a security key, smart card or passkey.
+  - Observe a privileged user authenticating to a server. Check whether they are required to use a phishing-resistant form of multi-factor authentication, such as a security key, smart card, or passkey.
+
+- **Successful and unsuccessful multi-factor authentication events are centrally logged.**
+  - Within the RSoP report, look for the ‘Audit Logon’ and ‘Audit Special Logon’ settings at ‘Computer Configuration\Policies\Windows Settings\Security Settings\Advanced Audit Policy Configuration\Audit Policies\Logon/Logoff\’. They should be enabled with a value of ‘Success and Failure’. In addition, determine if these event logs are being centrally stored.
+  - For certain MFA implementations, the above guidance may not be applicable. In these instances, discuss whether logging is available for all systems that users authenticate to and seek evidence that such logging is in place.
+
+- **Event logs are protected from unauthorised modification and deletion.**
+  - Discuss whether a SIEM, or equivalent solution, is used to protect event logs from unauthorised modification and deletion.
+
+- **Event logs from internet-facing servers are analysed in a timely manner to detect cybersecurity events.**
+  - Discuss whether security operations centre (SOC) analysts monitor event logs for signs of compromise (i.e. security events).
+
+- **Cybersecurity events are analysed in a timely manner to identify cybersecurity incidents.**
+  - Discuss how security events are analysed by SOC analysts to determine whether a cybersecurity incident has occurred.
+  - Reviewing an organisation’s cybersecurity incident register may also provide evidence of the analysis of cybersecurity events in order to identify cybersecurity incidents.
+
+- **Cybersecurity incidents are reported to the chief information security officer, or one of their delegates, as soon as possible after they occur or are discovered.**
+  - Discuss to what extent cybersecurity incidents are reported to an organisation’s chief information security officer, or one of their delegates, after they occur or are discovered. Determine whether typical reporting timeframes are reasonable (i.e. is reporting occurring as soon as possible).
+
+- **Cybersecurity incidents are reported to ASD as soon as possible after they occur or are discovered.**
+  - Discuss to what extent cybersecurity incidents are reported to ASD after they occur or are discovered. Determine whether typical reporting timeframes are reasonable (i.e. is reporting occurring as soon as possible).
+
+- **Following the identification of a cybersecurity incident, the cybersecurity incident response plan is enacted.**
+  - Request access to a copy of the cybersecurity incident response plan for the system. Discuss to what extent it is followed following a cybersecurity incident.
 
 ### **Restrict administrative privileges**
 
@@ -79,36 +105,59 @@ At this maturity level, event logs relating to the use of, and changes to, privi
 
 The section below provides guidance tailored to the assessment method. When selecting a method, the quality of the evidence provided by each method should be strongly considered.
 
-| Control | Assessment Guidance (ordered by effectiveness) |
-| --- | --- |
-| Privileged access to systems, applications and data repositories is disabled after 12 months unless revalidated. | Check whether an expiry date is set for privileged user accounts in Active Directory under user account profiles and whether a mechanism exists to disable such user accounts after 12 months unless revalidated beforehand. Ask for a screenshot of the output of the following PowerShell commands that check for user accounts with either no expiration date or have an expiration date that exceeds 12 months: |
-|  | <pre><code>Get-ADUser -Filter {(admincount -eq 1) -and (enabled -eq $true)} -Properties AccountExpirationDate | Where-Object {$_.AccountExpirationDate -like ""} | Select @{n='Username'; e={$_.SamAccountName}}, @{n='Account Expiration Date'; e={$_.AccountExpirationDate}}, @{n='Enabled'; e={$_.Enabled}}<br>Get-ADUser -Filter {(admincount -eq 1) -and (enabled -eq $true)} -Properties AccountExpirationDate | Where-Object {$_.AccountExpirationDate -gt (Get-Date).AddMonths(12)} | Select @{n='Username'; e={$_.SamAccountName}}, @{n='Account Expiration Date'; e={$_.AccountExpirationDate}}, @{n='Enabled'; e={$_.Enabled}}</code></pre> |
-| Privileged access to systems and applications is disabled after 45 days of inactivity. | Microsoft provides [guidance on the use of PowerShell](https://learn.microsoft.com/en-au/services-hub/unified/health/remediation-steps-ad/regularly-check-for-and-remove-inactive-user-accounts-in-active-directory) in order to identify inactive user accounts based on when they were last used to logon to a system. Ask for a screenshot of the output of the following PowerShell command that checks for inactive user accounts to demonstrate that this activity takes place on a daily basis: |
-|  | <pre><code>Get-ADUser -Filter {(admincount -eq 1) -and (enabled -eq $true)} -Properties LastLogonDate | Where-Object {$_.LastLogonDate -lt (Get-Date).AddDays(-45) -and$_.LastLogonDate -ne $null} | Select @{n='Username'; e={$_.samaccountname}}, @{n='Last Logon Date'; e={$_.LastLogonDate}}, @{n='Enabled'; e={$_.enabled}}</code></pre> |
-| Privileged operating environments are not virtualised within unprivileged operating environments. | Discuss how privileged operating environments have been implemented for the management of the system. It should align to one of the implementation scenarios within the context section of this mitigation strategy and be covered within the security documentation for the system. |
-| Administrative activities are conducted through jump servers. | Tools such as [BloodHound](https://www.sans.org/blog/bloodhound-sniffing-out-path-through-windows-domains/) can be used to determine the path administrators are using to logon and which servers are jump servers. |
-|  | Request a system administrator demonstrate creating and removing a test user account to confirm the use of jump servers. |
-|  | Discuss the network structure for the system to determine if jump servers have been implemented for administrative activities. This should be visible in network diagrams for the system. |
-| Credentials for break glass accounts, local administrator accounts and service accounts are long, unique, unpredictable and managed. | Discuss how break glass accounts, local administrator accounts and service accounts are managed. Confirm that Microsoft’s [Local Administrator Password Solution](https://www.microsoft.com/en-au/download/details.aspx?id=46899), or another suitable approach that results in long, unique and unpredictable passwords for each workstation and server, is used. |
-|  | To check if all computers have LAPS configured, run the following PowerShell commands and compare the output: |
-|  | <pre><code>Get-ADComputer -Filter {ms-Mcs-AdmPwdExpirationTime -like "*"} -Properties ms-Mcs-AdmPwdExpirationTime | measure<br>Get-ADComputer -Filter {Enabled -eq $true} | measure</code></pre> |
-|  | Discuss how [group Managed Service Accounts](https://learn.microsoft.com/en-au/entra/architecture/service-accounts-group-managed) (gMSAs) are managed. gMSAs are domain user accounts that use 240-byte randomly generated complex passwords. gMSAs shift password management to the Microsoft Windows operating system, which changes the password every 30 days. |
-| Privileged access events are centrally logged. | Within the RSoP report, look for the ‘Audit Sensitive Privilege Use’ setting at ‘Computer Configuration\Policies\Windows Settings\Security Settings\Advanced Audit Policy Configuration\Audit Policies\Privilege Use\’. It should be enabled with a value of ‘Success and Failure’. |
-|  | In addition, look for the ‘Audit Logon’, ‘Audit Other Logon/Logoff Events’ and ‘Audit Special Logon’ settings at ‘Computer Configuration\Policies\Windows Settings\Security Settings\Advanced Audit Policy Configuration\Audit Policies\Logon/Logoff’. They should be enabled with a value of ‘Success and Failure’. |
-|  | Furthermore, look for the ‘Audit Logoff’ setting at ‘Computer Configuration\Policies\Windows Settings\Security Settings\Advanced Audit Policy Configuration\Audit Policies\Logon/Logoff’. It should be enabled with a value of ‘Success’. |
-|  | Finally, determine if these event logs are being centrally stored. |
-| Privileged user account and security group management events are centrally logged. | Leveraging related Windows Event IDs, check whether changes to privileged user accounts and groups are logged. In addition, determine if these event logs are being centrally stored. |
-|  | More information on security operations for privileged user accounts in Active Directory, including related Windows Event IDs, is [available from Microsoft](https://learn.microsoft.com/en-au/entra/architecture/security-operations-privileged-accounts). |
-|  | Within the RSoP report, look for the ‘Audit Computer Account Management’ and ‘Audit User Account Management’ settings at ‘Computer Configuration\Policies\Windows Settings\Security Settings\Advanced Audit Policy Configuration\Audit Policies\Account Management\’. They should be enabled with a value of ‘Success and Failure’. |
-|  | In addition, look for the ‘Audit Security Group Management’ setting at ‘Computer Configuration\Policies\Windows Settings\Security Settings\Advanced Audit Policy Configuration\Audit Policies\Account Management\’. It should be enabled with a value of ‘Success and Failure’. |
-| Event logs are protected from unauthorised modification and deletion. | Discuss whether a SIEM, or equivalent solution, is used to protect event logs from unauthorised modification and deletion. |
-| Event logs from internet-facing servers are analysed in a timely manner to detect cybersecurity events. | Discuss whether SOC analysts monitor event logs for signs of compromise (i.e. security events). |
-| Cybersecurity events are analysed in a timely manner to identify cybersecurity incidents. | Discuss how security events are analysed by SOC analysts to determine whether a cybersecurity incident has occurred. |
-|  | Reviewing an organisation’s cybersecurity incident register may also provide evidence of the analysis of cybersecurity events in order to identify cybersecurity incidents. |
-| Cybersecurity incidents are reported to the chief information security officer, or one of their delegates, as soon as possible after they occur or are discovered. | Discuss to what extent cybersecurity incidents are reported to an organisation’s chief information security officer, or one of their delegates, after they occur or are discovered. Determine whether typical reporting timeframes are reasonable (i.e. is reporting occurring as soon as possible). |
-| Cybersecurity incidents are reported to ASD as soon as possible after they occur or are discovered. | Discuss to what extent cybersecurity incidents are reported to ASD after they occur or are discovered. Determine whether typical reporting timeframes are reasonable (i.e. is reporting occurring as soon as possible). |
-| Following the identification of a cybersecurity incident, the cybersecurity incident response plan is enacted. | Request access to a copy of the cybersecurity incident response plan for the system. Discuss to what extent it is followed following a cybersecurity incident. |
+**Assessment Guidance (ordered by effectiveness):**
 
+- **Privileged access to systems, applications and data repositories is disabled after 12 months unless revalidated.**
+  - Check whether an expiry date is set for privileged user accounts in Active Directory under user account profiles and whether a mechanism exists to disable such user accounts after 12 months unless revalidated beforehand. Ask for a screenshot of the output of the following PowerShell commands that check for user accounts with either no expiration date or have an expiration date that exceeds 12 months:
+  - `Get-ADUser -Filter {(admincount -eq 1) -and (enabled -eq $true)} -Properties AccountExpirationDate | Where-Object {$_.AccountExpirationDate -like ""} | Select @{n='Username'; e={$_.SamAccountName}}, @{n='Account Expiration Date'; e={$_.AccountExpirationDate}}, @{n='Enabled'; e={$_.Enabled}}` and `Get-ADUser -Filter {(admincount -eq 1) -and (enabled -eq $true)} -Properties AccountExpirationDate | Where-Object {$_.AccountExpirationDate -gt (Get-Date).AddMonths(12)} | Select @{n='Username'; e={$_.SamAccountName}}, @{n='Account Expiration Date'; e={$_.AccountExpirationDate}}, @{n='Enabled'; e={$_.Enabled}}`
+- **Privileged access to systems and applications is disabled after 45 days of inactivity.**
+  - Microsoft provides [guidance on the use of PowerShell](https://learn.microsoft.com/en-au/services-hub/unified/health/remediation-steps-ad/regularly-check-for-and-remove-inactive-user-accounts-in-active-directory) in order to identify inactive user accounts based on when they were last used to logon to a system. Ask for a screenshot of the output of the following PowerShell command that checks for inactive user accounts to demonstrate that this activity takes place on a daily basis:
+  - `Get-ADUser -Filter {(admincount -eq 1) -and (enabled -eq $true)} -Properties LastLogonDate | Where-Object {$_.LastLogonDate -lt (Get-Date).AddDays(-45) -and $_.LastLogonDate -ne $null} | Select @{n='Username'; e={$_.samaccountname}}, @{n='Last Logon Date'; e={$_.LastLogonDate}}, @{n='Enabled'; e={$_.enabled}}`
+
+- **Privileged operating environments are not virtualised within unprivileged operating environments.**
+  - Discuss how privileged operating environments have been implemented for the management of the system. It should align to one of the implementation scenarios within the context section of this mitigation strategy and be covered within the security documentation for the system.
+
+- **Administrative activities are conducted through jump servers.**
+  - Tools such as [BloodHound](https://www.sans.org/blog/bloodhound-sniffing-out-path-through-windows-domains/) can be used to determine the path administrators are using to logon and which servers are jump servers.
+  - Request a system administrator demonstrate creating and removing a test user account to confirm the use of jump servers.
+  - Discuss the network structure for the system to determine if jump servers have been implemented for administrative activities. This should be visible in network diagrams for the system.
+
+- **Credentials for break glass accounts, local administrator accounts and service accounts are long, unique, unpredictable and managed.**
+  - Discuss how break glass accounts, local administrator accounts and service accounts are managed. Confirm that Microsoft’s [Local Administrator Password Solution](https://www.microsoft.com/en-au/download/details.aspx?id=46899), or another suitable approach that results in long, unique and unpredictable passwords for each workstation and server, is used.
+  - To check if all computers have LAPS configured, run the following PowerShell commands and compare the output:
+  - `Get-ADComputer -Filter {ms-Mcs-AdmPwdExpirationTime -like "*"} -Properties ms-Mcs-AdmPwdExpirationTime | measure` and `Get-ADComputer -Filter {Enabled -eq $true} | measure`
+  - Discuss how [group Managed Service Accounts](https://learn.microsoft.com/en-au/entra/architecture/service-accounts-group-managed) (gMSAs) are managed. gMSAs are domain user accounts that use 240-byte randomly generated complex passwords. gMSAs shift password management to the Microsoft Windows operating system, which changes the password every 30 days.
+
+- **Privileged access events are centrally logged.**
+  - Within the RSoP report, look for the ‘Audit Sensitive Privilege Use’ setting at ‘Computer Configuration\Policies\Windows Settings\Security Settings\Advanced Audit Policy Configuration\Audit Policies\Privilege Use\’. It should be enabled with a value of ‘Success and Failure’.
+  - In addition, look for the ‘Audit Logon’, ‘Audit Other Logon/Logoff Events’ and ‘Audit Special Logon’ settings at ‘Computer Configuration\Policies\Windows Settings\Security Settings\Advanced Audit Policy Configuration\Audit Policies\Logon/Logoff’. They should be enabled with a value of ‘Success and Failure’.
+  - Furthermore, look for the ‘Audit Logoff’ setting at ‘Computer Configuration\Policies\Windows Settings\Security Settings\Advanced Audit Policy Configuration\Audit Policies\Logon/Logoff’. It should be enabled with a value of ‘Success’.
+  - Finally, determine if these event logs are being centrally stored.
+
+- **Privileged user account and security group management events are centrally logged.**
+  - Leveraging related Windows Event IDs, check whether changes to privileged user accounts and groups are logged. In addition, determine if these event logs are being centrally stored.
+  - More information on security operations for privileged user accounts in Active Directory, including related Windows Event IDs, is [available from Microsoft](https://learn.microsoft.com/en-au/entra/architecture/security-operations-privileged-accounts).
+  - Within the RSoP report, look for the ‘Audit Computer Account Management’ and ‘Audit User Account Management’ settings at ‘Computer Configuration\Policies\Windows Settings\Security Settings\Advanced Audit Policy Configuration\Audit Policies\Account Management\’. They should be enabled with a value of ‘Success and Failure’.
+  - In addition, look for the ‘Audit Security Group Management’ setting at ‘Computer Configuration\Policies\Windows Settings\Security Settings\Advanced Audit Policy Configuration\Audit Policies\Account Management\’. It should be enabled with a value of ‘Success and Failure’.
+
+- **Event logs are protected from unauthorised modification and deletion.**
+  - Discuss whether a SIEM, or equivalent solution, is used to protect event logs from unauthorised modification and deletion.
+
+- **Event logs from internet-facing servers are analysed in a timely manner to detect cybersecurity events.**
+  - Discuss whether SOC analysts monitor event logs for signs of compromise (i.e. security events).
+
+- **Cybersecurity events are analysed in a timely manner to identify cybersecurity incidents.**
+  - Discuss how security events are analysed by SOC analysts to determine whether a cybersecurity incident has occurred.
+  - Reviewing an organisation’s cybersecurity incident register may also provide evidence of the analysis of cybersecurity events in order to identify cybersecurity incidents.
+
+- **Cybersecurity incidents are reported to the chief information security officer, or one of their delegates, as soon as possible after they occur or are discovered.**
+  - Discuss to what extent cybersecurity incidents are reported to an organisation’s chief information security officer, or one of their delegates, after they occur or are discovered. Determine whether typical reporting timeframes are reasonable (i.e. is reporting occurring as soon as possible).
+
+- **Cybersecurity incidents are reported to ASD as soon as possible after they occur or are discovered.**
+  - Discuss to what extent cybersecurity incidents are reported to ASD after they occur or are discovered. Determine whether typical reporting timeframes are reasonable (i.e. is reporting occurring as soon as possible).
+
+- **Following the identification of a cybersecurity incident, the cybersecurity incident response plan is enacted.**
+  - Request access to a copy of the cybersecurity incident response plan for the system. Discuss to what extent it is followed following a cybersecurity incident.
 ### **Application control**
 
 ### **Context**
@@ -123,20 +172,41 @@ The majority of application control solutions will have a form of logging. As su
 
 The section below provides guidance tailored to the assessment method. When selecting a method, the quality of the evidence provided by each method should be strongly considered.
 
-| Control | Assessment Guidance (ordered by effectiveness) |
-| --- | --- |
-| Application control is implemented on internet-facing servers. | Check whether an application control solution has been implemented on internet-facing servers. |
-| Application control is applied to all locations other than user profiles and temporary folders used by operating systems, web browsers and email clients. | Use the guidance provided in Maturity Level One of this guide but apply it to all other locations on disk. |
-| Microsoft’s recommended application blocklist is implemented. | Request a copy of application control rulesets. Check whether Microsoft’s [recommended application blocklist](https://learn.microsoft.com/en-au/windows/security/application-security/application-control/windows-defender-application-control/design/applications-that-can-bypass-wdac) has been specified. |
-| Application control rulesets are validated on an annual or more frequent basis. | Discuss how application control rulesets are validated and with what frequency. In addition, discuss the governance processes and procedures around making changings to application control rulesets and any testing or reviews that are conducted following the addition or removal of applications. |
-| Allowed and blocked application control events are centrally logged. | Ask whether logging is available for the application control solution and request screenshots of any logging output that shows records of executable content that was allowed to execute as well as executable content that was blocked from executing. In addition, determine if these event logs are being centrally stored. |
-| Event logs are protected from unauthorised modification and deletion. | Discuss whether a SIEM, or equivalent solution, is used to protect event logs from unauthorised modification and deletion. |
-| Event logs from internet-facing servers are analysed in a timely manner to detect cybersecurity events. | Discuss whether SOC analysts monitor event logs for signs of compromise (i.e. security events). |
-| Cybersecurity events are analysed in a timely manner to identify cybersecurity incidents. | Discuss how security events are analysed by SOC analysts to determine whether a cybersecurity incident has occurred. |
-|  | Reviewing an organisation’s cybersecurity incident register may also provide evidence of the analysis of cybersecurity events in order to identify cybersecurity incidents. |
-| Cybersecurity incidents are reported to the chief information security officer, or one of their delegates, as soon as possible after they occur or are discovered. | Discuss to what extent cybersecurity incidents are reported to an organisation’s chief information security officer, or one of their delegates, after they occur or are discovered. Determine whether typical reporting timeframes are reasonable (i.e. is reporting occurring as soon as possible). |
-| Cybersecurity incidents are reported to ASD as soon as possible after they occur or are discovered. | Discuss to what extent cybersecurity incidents are reported to ASD after they occur or are discovered. Determine whether typical reporting timeframes are reasonable (i.e. is reporting occurring as soon as possible). |
-| Following the identification of a cybersecurity incident, the cybersecurity incident response plan is enacted. | Request access to a copy of the cybersecurity incident response plan for the system. Discuss to what extent it is followed following a cybersecurity incident. |
+**Assessment Guidance (ordered by effectiveness):**
+
+- **Application control is implemented on internet-facing servers.**
+  - Check whether an application control solution has been implemented on internet-facing servers.
+
+- **Application control is applied to all locations other than user profiles and temporary folders used by operating systems, web browsers and email clients.**
+  - Use the guidance provided in Maturity Level One of this guide but apply it to all other locations on disk.
+
+- **Microsoft’s recommended application blocklist is implemented.**
+  - Request a copy of application control rulesets. Check whether Microsoft’s [recommended application blocklist](https://learn.microsoft.com/en-au/windows/security/application-security/application-control/windows-defender-application-control/design/applications-that-can-bypass-wdac) has been specified.
+
+- **Application control rulesets are validated on an annual or more frequent basis.**
+  - Discuss how application control rulesets are validated and with what frequency. In addition, discuss the governance processes and procedures around making changings to application control rulesets and any testing or reviews that are conducted following the addition or removal of applications.
+
+- **Allowed and blocked application control events are centrally logged.**
+  - Ask whether logging is available for the application control solution and request screenshots of any logging output that shows records of executable content that was allowed to execute as well as executable content that was blocked from executing. In addition, determine if these event logs are being centrally stored.
+
+- **Event logs are protected from unauthorised modification and deletion.**
+  - Discuss whether a SIEM, or equivalent solution, is used to protect event logs from unauthorised modification and deletion.
+
+- **Event logs from internet-facing servers are analysed in a timely manner to detect cybersecurity events.**
+  - Discuss whether SOC analysts monitor event logs for signs of compromise (i.e. security events).
+
+- **Cybersecurity events are analysed in a timely manner to identify cybersecurity incidents.**
+  - Discuss how security events are analysed by SOC analysts to determine whether a cybersecurity incident has occurred.
+  - Reviewing an organisation’s cybersecurity incident register may also provide evidence of the analysis of cybersecurity events in order to identify cybersecurity incidents.
+
+- **Cybersecurity incidents are reported to the chief information security officer, or one of their delegates, as soon as possible after they occur or are discovered.**
+  - Discuss to what extent cybersecurity incidents are reported to an organisation’s chief information security officer, or one of their delegates, after they occur or are discovered. Determine whether typical reporting timeframes are reasonable (i.e. is reporting occurring as soon as possible).
+
+- **Cybersecurity incidents are reported to ASD as soon as possible after they occur or are discovered.**
+  - Discuss to what extent cybersecurity incidents are reported to ASD after they occur or are discovered. Determine whether typical reporting timeframes are reasonable (i.e. is reporting occurring as soon as possible).
+
+- **Following the identification of a cybersecurity incident, the cybersecurity incident response plan is enacted.**
+  - Request access to a copy of the cybersecurity incident response plan for the system. Discuss to what extent it is followed following a cybersecurity incident.
 
 ### **Restrict Microsoft Office macros**
 
@@ -148,11 +218,12 @@ At this maturity level, a requirement is introduced relating to the use of the a
 
 The section below provides guidance tailored to the assessment method. When selecting a method, the quality of the evidence provided by each method should be strongly considered.
 
-| Control | Assessment Guidance (ordered by effectiveness) |
-| --- | --- |
-| Microsoft Office macros are blocked from making Win32 API calls. | ASD’s E8MVT can assist in determining the implementation of this control as it includes a test file that contains a Microsoft Office macro designed to test this ASR rule. Note, this test will need to be conducted with a user account that is allowed to execute Microsoft Office macros. |
-|  | Within the RSoP report, look for the ‘Configure Attack Surface Reduction rules’ setting at ‘Computer Configuration\Policies\Administrative Templates\Windows Components\Microsoft Defender Antivirus\Microsoft Defender Exploit Guard\Attack Surface Reduction\’. It should be enabled and include an entry of ‘92E97FA1-2EDF-4476-BDD6-9DD0B4DDDC7B’ with a value of 1 (i.e. enabled). |
-|  | If a third-party solution is being used, discuss if the third-party solution has similar functionality to the ASR rule. If so, request evidence as required. |
+**Assessment Guidance (ordered by effectiveness):**
+
+- **Microsoft Office macros are blocked from making Win32 API calls.**
+  - ASD’s E8MVT can assist in determining the implementation of this control as it includes a test file that contains a Microsoft Office macro designed to test this ASR rule. Note, this test will need to be conducted with a user account that is allowed to execute Microsoft Office macros.
+  - Within the RSoP report, look for the ‘Configure Attack Surface Reduction rules’ setting at ‘Computer Configuration\Policies\Administrative Templates\Windows Components\Microsoft Defender Antivirus\Microsoft Defender Exploit Guard\Attack Surface Reduction\’. It should be enabled and include an entry of ‘92E97FA1-2EDF-4476-BDD6-9DD0B4DDDC7B’ with a value of 1 (i.e. enabled).
+  - If a third-party solution is being used, discuss if the third-party solution has similar functionality to the ASR rule. If so, request evidence as required.
 
 ### **User application hardening**
 
@@ -170,41 +241,76 @@ At this maturity level, event logs for PowerShell should be centrally collected 
 
 The section below provides guidance tailored to the assessment method. When selecting a method, the quality of the evidence provided by each method should be strongly considered.
 
-| Control | Assessment Guidance (ordered by effectiveness) |
-| --- | --- |
-| Web browsers are hardened using ASD and vendor hardening guidance, with the most restrictive guidance taking precedence when conflicts occur. | Generally, hardening guidance can be configured via group policy setting templates that are made available by vendors. This will be included as part of any RSoP reports. |
-|  | Microsoft hardening guidance for Microsoft Edge is available from their [Microsoft Security Baselines Blog](https://techcommunity.microsoft.com/t5/microsoft-security-baselines/bg-p/Microsoft-Security-Baselines). |
-|  | Google hardening guidance for Google Chrome is available within their [*Chrome Browser Enterprise Security Configuration Guide (Windows)*](https://support.google.com/chrome/a/answer/9710898?hl=en). |
-| Microsoft Office is blocked from creating child processes. | ASD’s E8MVT can assist in determining the implementation of this control as it includes test files that contain Microsoft Office macros designed to test each ASR rule. Note, this test will need to be conducted with a user account that is allowed to execute Microsoft Office macros. |
-|  | Within the RSoP report, look for the ‘Configure Attack Surface Reduction rules’ setting at ‘Computer Configuration\Policies\Administrative Templates\Windows Components\Microsoft Defender Antivirus\Microsoft Defender Exploit Guard\Attack Surface Reduction\’. It should be enabled and include the entries of ‘D4F940AB-401B-4EFC-AADC-AD5F3C50688A’ and ‘26190899-1602-49E8-8B27-EB1D0A1CE869’ with a value of 1 (i.e. enabled). |
-| Microsoft Office is blocked from creating executable content. | ASD’s E8MVT can assist in determining the implementation of this control as it includes test files that contain Microsoft Office macros designed to test each ASR rule. Note, this test will need to be conducted with a user account that is allowed to execute Microsoft Office macros. |
-|  | Within the RSoP report, look for the ‘Configure Attack Surface Reduction rules’ setting at ‘Computer Configuration\Policies\Administrative Templates\Windows Components\Microsoft Defender Antivirus\Microsoft Defender Exploit Guard\Attack Surface Reduction\’. It should be enabled and include the entries of ‘3B576869-A4EC-4529-8536-B80A7769E899’ and ‘BE9BA2D9-53EA-4CDC-84E5-9B1EEEE46550’ with a value of 1 (i.e. enabled). |
-| Microsoft Office is blocked from injecting code into other processes. | ASD’s E8MVT can assist in determining the implementation of this control as it includes a test file that contains a Microsoft Office macro designed to test this ASR rule. Note, this test will need to be conducted with a user account that is allowed to execute Microsoft Office macros. |
-|  | Within the RSoP report, look for the ‘Configure Attack Surface Reduction rules’ setting at ‘Computer Configuration\Policies\Administrative Templates\Windows Components\Microsoft Defender Antivirus\Microsoft Defender Exploit Guard\Attack Surface Reduction\’. It should be enabled and include the entry of ‘75668C1F-73B5-4CF0-BB93-3ECF5CB7CC84’ with a value of 1 (i.e. enabled). |
-| Microsoft Office is configured to prevent activation of Object Linking and Embedding packages. | ASD’s E8MVT can assist in determining the implementation of this control. |
-|  | Within the RSoP report, look for the ‘PackagerPrompt’ registry setting at ‘HKEY_CURRENT_USER\Software\Microsoft\Office\<version>\<Microsoft Office Application>\Security\’. It should exist and be set to ‘REG_DWORD 0x00000002 (2)’. |
-| Office productivity suites are hardened using ASD and vendor hardening guidance, with the most restrictive guidance taking precedence when conflicts occur. | Generally, hardening guidance can be configured via group policy setting templates that are made available by vendors. This will be included as part of any RSoP reports. |
-|  | ASD hardening guidance for Microsoft Office is available within the [*Hardening Microsoft 365, Office 2021, Office 2019 and Office 2016*](https://www.cyber.gov.au/business-government/protecting-devices-systems/hardening-systems-applications/system-hardening/hardening-microsoft-365-office-2021-office-2019-and-office-2016) publication. |
-|  | Microsoft hardening guidance for Microsoft Office is available from their [Microsoft Security Baselines Blog](https://techcommunity.microsoft.com/t5/microsoft-security-baselines/bg-p/Microsoft-Security-Baselines). |
-| Office productivity suite security settings cannot be changed by users. | ASD’s E8MVT can assist in determining the implementation of this control. |
-|  | Within the RSoP report, look for security-related group policy settings that have been defined for Microsoft Office. Alternatively, request a screenshot of the security settings of each Microsoft Office application present on the system. Identify if settings are greyed out, thereby indicating they cannot be changed by users. |
-| PDF software is blocked from creating child processes. | ASD’s E8MVT can assist in determining the implementation of this control. |
-|  | This ASR rule applies only to Adobe PDF software. As such, open any Adobe PDF software that exists on the system, such as Adobe Acrobat, and use File-Open to browse to a location with an .exe file, change the view to show all files, right click on an .exe file and select Open. The ASR rule if implemented will block this. |
-|  | Within the RSoP report, look for the ‘Configure Attack Surface Reduction rules’ setting at ‘Computer Configuration\Policies\Administrative Templates\Windows Components\Microsoft Defender Antivirus\Microsoft Defender Exploit Guard\Attack Surface Reduction\’. It should be enabled and include the entry of ‘7674BA52-37EB-4A4F-A9A1-F0F9A1619A2C’ with a value of 1 (i.e. enabled). |
-| PDF software is hardened using ASD and vendor hardening guidance, with the most restrictive guidance taking precedence when conflicts occur. | Generally, hardening guidance for PDF software can be configured via registry settings. This will be included as part of any RSoP reports. |
-|  | Adobe hardening guidance for Adobe Acrobat and Adobe Reader is available within their [*Security Configuration Guide for Acrobat*](https://www.adobe.com/devnet-docs/acrobatetk/tools/AppSec/index.html) publication. |
-| PDF software security settings cannot be changed by users. | Within the RSoP report, look for security-related group policy settings that have been defined for PDF software. Alternatively, request a screenshot of the security settings of any PDF software present on the system. Identify if settings are greyed out, thereby indicating they cannot be changed by users. |
-| PowerShell module logging, script block logging and transcription events are centrally logged. | ASD’s E8MVT can assist in determining the implementation of this control. |
-|  | Within the RSoP report, look for the ‘Turn on Module Logging’, ‘Turn on PowerShell Script Block Logging’ and ‘Turn on PowerShell Transcription’ settings at ‘Computer Configuration\Policies\Administrative Templates\Windows Components\Windows PowerShell’. They should all be enabled. In addition, module logging should ideally be configured to log all modules (i.e. ‘*’), although an organisation may tailor this setting. Finally, determine if these event logs are being centrally stored. |
-| Command line process creation events are centrally logged. | ASD’s E8MVT can assist in determining the implementation of this control. |
-|  | Within the RSoP report, look for the ‘Audit Process Creation’ setting at ‘Computer Configuration\Policies\Windows Settings\Security Settings\Advanced Audit Policy Configuration\Audit Policies\Detailed Tracking\’. It should be enabled with a value of ‘Success’. In addition, look for the ‘Include command line in process creation events’ setting at ‘Computer Configuration\Policies\Administrative Templates\System\Audit Process Creation’. It should be enabled. Finally, determine if these event logs are being centrally stored. |
-| Event logs are protected from unauthorised modification and deletion. | Discuss whether a SIEM, or equivalent solution, is used to protect event logs from unauthorised modification and deletion. |
-| Event logs from internet-facing servers are analysed in a timely manner to detect cybersecurity events. | Discuss whether SOC analysts monitor event logs for signs of compromise (i.e. security events). |
-| Cybersecurity events are analysed in a timely manner to identify cybersecurity incidents. | Discuss how security events are analysed by SOC analysts to determine whether a cybersecurity incident has occurred. |
-|  | Reviewing an organisation’s cybersecurity incident register may also provide evidence of the analysis of cybersecurity events in order to identify cybersecurity incidents. |
-| Cybersecurity incidents are reported to the chief information security officer, or one of their delegates, as soon as possible after they occur or are discovered. | Discuss to what extent cybersecurity incidents are reported to an organisation’s chief information security officer, or one of their delegates, after they occur or are discovered. Determine whether typical reporting timeframes are reasonable (i.e. is reporting occurring as soon as possible). |
-| Cybersecurity incidents are reported to ASD as soon as possible after they occur or are discovered. | Discuss to what extent cybersecurity incidents are reported to ASD after they occur or are discovered. Determine whether typical reporting timeframes are reasonable (i.e. is reporting occurring as soon as possible). |
-| Following the identification of a cybersecurity incident, the cybersecurity incident response plan is enacted. | Request access to a copy of the cybersecurity incident response plan for the system. Discuss to what extent it is followed following a cybersecurity incident. |
+**Assessment Guidance (ordered by effectiveness):**
+
+- **Web browsers are hardened using ASD and vendor hardening guidance, with the most restrictive guidance taking precedence when conflicts occur.**
+  - Generally, hardening guidance can be configured via group policy setting templates that are made available by vendors. This will be included as part of any RSoP reports.
+  - Microsoft hardening guidance for Microsoft Edge is available from their [Microsoft Security Baselines Blog](https://techcommunity.microsoft.com/t5/microsoft-security-baselines/bg-p/Microsoft-Security-Baselines).
+  - Google hardening guidance for Google Chrome is available within their [*Chrome Browser Enterprise Security Configuration Guide (Windows)*](https://support.google.com/chrome/a/answer/9710898?hl=en).
+
+- **Microsoft Office is blocked from creating child processes.**
+  - ASD’s E8MVT can assist in determining the implementation of this control as it includes test files that contain Microsoft Office macros designed to test each ASR rule. Note, this test will need to be conducted with a user account that is allowed to execute Microsoft Office macros.
+  - Within the RSoP report, look for the ‘Configure Attack Surface Reduction rules’ setting at ‘Computer Configuration\Policies\Administrative Templates\Windows Components\Microsoft Defender Antivirus\Microsoft Defender Exploit Guard\Attack Surface Reduction\’. It should be enabled and include the entries of ‘D4F940AB-401B-4EFC-AADC-AD5F3C50688A’ and ‘26190899-1602-49E8-8B27-EB1D0A1CE869’ with a value of 1 (i.e. enabled).
+
+- **Microsoft Office is blocked from creating executable content.**
+  - ASD’s E8MVT can assist in determining the implementation of this control as it includes test files that contain Microsoft Office macros designed to test each ASR rule. Note, this test will need to be conducted with a user account that is allowed to execute Microsoft Office macros.
+  - Within the RSoP report, look for the ‘Configure Attack Surface Reduction rules’ setting at ‘Computer Configuration\Policies\Administrative Templates\Windows Components\Microsoft Defender Antivirus\Microsoft Defender Exploit Guard\Attack Surface Reduction\’. It should be enabled and include the entries of ‘3B576869-A4EC-4529-8536-B80A7769E899’ and ‘BE9BA2D9-53EA-4CDC-84E5-9B1EEEE46550’ with a value of 1 (i.e. enabled).
+
+- **Microsoft Office is blocked from injecting code into other processes.**
+  - ASD’s E8MVT can assist in determining the implementation of this control as it includes a test file that contains a Microsoft Office macro designed to test this ASR rule. Note, this test will need to be conducted with a user account that is allowed to execute Microsoft Office macros.
+  - Within the RSoP report, look for the ‘Configure Attack Surface Reduction rules’ setting at ‘Computer Configuration\Policies\Administrative Templates\Windows Components\Microsoft Defender Antivirus\Microsoft Defender Exploit Guard\Attack Surface Reduction\’. It should be enabled and include the entry of ‘75668C1F-73B5-4CF0-BB93-3ECF5CB7CC84’ with a value of 1 (i.e. enabled).
+
+- **Microsoft Office is configured to prevent activation of Object Linking and Embedding packages.**
+  - ASD’s E8MVT can assist in determining the implementation of this control.
+  - Within the RSoP report, look for the ‘PackagerPrompt’ registry setting at ‘HKEY_CURRENT_USER\Software\Microsoft\Office\<version>\<Microsoft Office Application>\Security\’. It should exist and be set to ‘REG_DWORD 0x00000002 (2)’.
+
+- **Office productivity suites are hardened using ASD and vendor hardening guidance, with the most restrictive guidance taking precedence when conflicts occur.**
+  - Generally, hardening guidance can be configured via group policy setting templates that are made available by vendors. This will be included as part of any RSoP reports.
+  - ASD hardening guidance for Microsoft Office is available within the [*Hardening Microsoft 365, Office 2021, Office 2019 and Office 2016*](https://www.cyber.gov.au/business-government/protecting-devices-systems/hardening-systems-applications/system-hardening/hardening-microsoft-365-office-2021-office-2019-and-office-2016) publication.
+  - Microsoft hardening guidance for Microsoft Office is available from their [Microsoft Security Baselines Blog](https://techcommunity.microsoft.com/t5/microsoft-security-baselines/bg-p/Microsoft-Security-Baselines).
+
+- **Office productivity suite security settings cannot be changed by users.**
+  - ASD’s E8MVT can assist in determining the implementation of this control.
+  - Within the RSoP report, look for security-related group policy settings that have been defined for Microsoft Office. Alternatively, request a screenshot of the security settings of each Microsoft Office application present on the system. Identify if settings are greyed out, thereby indicating they cannot be changed by users.
+
+- **PDF software is blocked from creating child processes.**
+  - ASD’s E8MVT can assist in determining the implementation of this control.
+  - This ASR rule applies only to Adobe PDF software. As such, open any Adobe PDF software that exists on the system, such as Adobe Acrobat, and use File-Open to browse to a location with an .exe file, change the view to show all files, right click on an .exe file and select Open. The ASR rule if implemented will block this.
+  - Within the RSoP report, look for the ‘Configure Attack Surface Reduction rules’ setting at ‘Computer Configuration\Policies\Administrative Templates\Windows Components\Microsoft Defender Antivirus\Microsoft Defender Exploit Guard\Attack Surface Reduction\’. It should be enabled and include the entry of ‘7674BA52-37EB-4A4F-A9A1-F0F9A1619A2C’ with a value of 1 (i.e. enabled).
+
+- **PDF software is hardened using ASD and vendor hardening guidance, with the most restrictive guidance taking precedence when conflicts occur.**
+  - Generally, hardening guidance for PDF software can be configured via registry settings. This will be included as part of any RSoP reports.
+  - Adobe hardening guidance for Adobe Acrobat and Adobe Reader is available within their [*Security Configuration Guide for Acrobat*](https://www.adobe.com/devnet-docs/acrobatetk/tools/AppSec/index.html) publication.
+
+- **PDF software security settings cannot be changed by users.**
+  - Within the RSoP report, look for security-related group policy settings that have been defined for PDF software. Alternatively, request a screenshot of the security settings of any PDF software present on the system. Identify if settings are greyed out, thereby indicating they cannot be changed by users.
+
+- **PowerShell module logging, script block logging and transcription events are centrally logged.**
+  - ASD’s E8MVT can assist in determining the implementation of this control.
+  - Within the RSoP report, look for the ‘Turn on Module Logging’, ‘Turn on PowerShell Script Block Logging’ and ‘Turn on PowerShell Transcription’ settings at ‘Computer Configuration\Policies\Administrative Templates\Windows Components\Windows PowerShell’. They should all be enabled. In addition, module logging should ideally be configured to log all modules (i.e. ‘*’), although an organisation may tailor this setting. Finally, determine if these event logs are being centrally stored.
+
+- **Command line process creation events are centrally logged.**
+  - ASD’s E8MVT can assist in determining the implementation of this control.
+  - Within the RSoP report, look for the ‘Audit Process Creation’ setting at ‘Computer Configuration\Policies\Windows Settings\Security Settings\Advanced Audit Policy Configuration\Audit Policies\Detailed Tracking\’. It should be enabled with a value of ‘Success’. In addition, look for the ‘Include command line in process creation events’ setting at ‘Computer Configuration\Policies\Administrative Templates\System\Audit Process Creation’. It should be enabled. Finally, determine if these event logs are being centrally stored.
+
+- **Event logs are protected from unauthorised modification and deletion.**
+  - Discuss whether a SIEM, or equivalent solution, is used to protect event logs from unauthorised modification and deletion.
+
+- **Event logs from internet-facing servers are analysed in a timely manner to detect cybersecurity events.**
+  - Discuss whether SOC analysts monitor event logs for signs of compromise (i.e. security events).
+
+- **Cybersecurity events are analysed in a timely manner to identify cybersecurity incidents.**
+  - Discuss how security events are analysed by SOC analysts to determine whether a cybersecurity incident has occurred.
+  - Reviewing an organisation’s cybersecurity incident register may also provide evidence of the analysis of cybersecurity events in order to identify cybersecurity incidents.
+
+- **Cybersecurity incidents are reported to the chief information security officer, or one of their delegates, as soon as possible after they occur or are discovered.**
+  - Discuss to what extent cybersecurity incidents are reported to an organisation’s chief information security officer, or one of their delegates, after they occur or are discovered. Determine whether typical reporting timeframes are reasonable (i.e. is reporting occurring as soon as possible).
+
+- **Cybersecurity incidents are reported to ASD as soon as possible after they occur or are discovered.**
+  - Discuss to what extent cybersecurity incidents are reported to ASD after they occur or are discovered. Determine whether typical reporting timeframes are reasonable (i.e. is reporting occurring as soon as possible).
+
+- **Following the identification of a cybersecurity incident, the cybersecurity incident response plan is enacted.**
+  - Request access to a copy of the cybersecurity incident response plan for the system. Discuss to what extent it is followed following a cybersecurity incident.
 
 ### **Regular backups**
 
@@ -218,9 +324,12 @@ It is important that backup administrator accounts (as well as user accounts in 
 
 The section below provides guidance tailored to the assessment method. When selecting a method, the quality of the evidence provided by each method should be strongly considered.
 
-| Control | Assessment Guidance (ordered by effectiveness) |
-| --- | --- |
-| Privileged user accounts (excluding backup administrator accounts) cannot access backups belonging to other user accounts. | Use the guidance provided in Maturity Level One of this guide but apply the more restrictive access control requirements. Specifically, privileged user accounts should only be able to access their own backups (except for backup administrator accounts). |
-|  | Active Directory queries and tools such as [BloodHound](https://www.sans.org/blog/bloodhound-sniffing-out-path-through-windows-domains/) can help to identify privileged user accounts including backup administrator accounts. |
-| Privileged user accounts (excluding backup administrator accounts) are prevented from modifying and deleting backups. | Use the guidance provided in Maturity Level One of this guide but apply the more restrictive access control requirements. Specifically, privileged user accounts should no longer be able to modify and delete backups. Such activities should be restricted to backup administrator accounts. |
-|  | Active Directory queries and tools such as [BloodHound](https://www.sans.org/blog/bloodhound-sniffing-out-path-through-windows-domains/) can help to identify privileged user accounts including backup administrator accounts. |
+**Assessment Guidance (ordered by effectiveness):**
+
+- **Privileged user accounts (excluding backup administrator accounts) cannot access backups belonging to other user accounts.**
+  - Use the guidance provided in Maturity Level One of this guide but apply the more restrictive access control requirements. Specifically, privileged user accounts should only be able to access their own backups (except for backup administrator accounts).
+  - Active Directory queries and tools such as [BloodHound](https://www.sans.org/blog/bloodhound-sniffing-out-path-through-windows-domains/) can help to identify privileged user accounts including backup administrator accounts.
+
+- **Privileged user accounts (excluding backup administrator accounts) are prevented from modifying and deleting backups.**
+  - Use the guidance provided in Maturity Level One of this guide but apply the more restrictive access control requirements. Specifically, privileged user accounts should no longer be able to modify and delete backups. Such activities should be restricted to backup administrator accounts.
+  - Active Directory queries and tools such as [BloodHound](https://www.sans.org/blog/bloodhound-sniffing-out-path-through-windows-domains/) can help to identify privileged user accounts including backup administrator accounts.
