@@ -5,12 +5,16 @@ While no set of mitigation strategies are guaranteed to protect against all cybe
 ## Table of Contents
 
 - [Essential Eight explained](Essential%20Eight%20explained.md)
-- [Essential Eight assessment process guide](Essential%20Eight%20assessment%20process%20guide.md)
-- [Essential Eight maturity model](Essential%20Eight%20maturity%20model.md)
-- [Essential Eight maturity model changes](Essential%20Eight%20maturity%20model%20changes.md)
-- [Essential Eight maturity model FAQ](Essential%20Eight%20maturity%20model%20FAQ.md)
-- [Essential Eight maturity model and ISM mapping](Essential%20Eight%20maturity%20model%20and%20ISM%20mapping.md)
-- [Essential Eight assessment course](Essential%20Eight%20assessment%20course.md)
+- [Essential Eight assessment process guide](assessment/Essential%20Eight%20assessment%20process%20guide.md)
+    - [Example Essential Eight assessment test plan – Maturity Level One (August 2024)](assessment/Example%20Essential%20Eight%20assessment%20test%20plan%20–%20Maturity%20Level%20One%20(August%202024).md)
+    - [Example Essential Eight assessment test plan – Maturity Level Two (November 2023)](assessment/Example%20Essential%20Eight%20assessment%20test%20plan%20–%20Maturity%20Level%20Two%20(November%202023).md)
+    - [Example Essential Eight assessment test plan – Maturity Level Three (November 2023)](assessment/Example%20Essential%20Eight%20assessment%20test%20plan%20–%20Maturity%20Level%20Three%20(November%202023).md)
+    - [Essential Eight assessment report template (November 2023)](assessment/Essential%20Eight%20assessment%20report%20template%20(November%202023).md)
+- [Essential Eight maturity model](maturity-model/Essential%20Eight%20maturity%20model.md)
+- [Essential Eight maturity model changes](maturity-model/Essential%20Eight%20maturity%20model%20changes.md)
+- [Essential Eight maturity model FAQ](maturity-model/Essential%20Eight%20maturity%20model%20FAQ.md)
+- [Essential Eight maturity model and ISM mapping](maturity-model/Essential%20Eight%20maturity%20model%20and%20ISM%20mapping.md)
+- [Essential Eight assessment course](assessment/Essential%20Eight%20assessment%20course.md)
 
 ## Disclaimer
 
