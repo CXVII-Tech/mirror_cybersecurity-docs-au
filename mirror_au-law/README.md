@@ -8,6 +8,7 @@ A Markdown-formatted mirror repository of Australian law relevant to cyber secur
 - soci 2018
 - intelligence 2001
 - privacy 1988
+- [Acts Interpretation Act 1901](mirror_acts-interpretation-act-1901/)
 
 ## Legend
 
