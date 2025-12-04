@@ -5,7 +5,7 @@ A Markdown-formatted mirror repository of Australian law relevant to cyber secur
 
 In reverse chronological order of original Act:
 - Intelligence Services and Other Legislation Amendment (Cyber Security) Act 2024
-- Cyber Security Act 2024
+- [Cyber Security Act 2024](mirror_cyber-security-act-2024/)
 - Security of Critical Infrastructure Act 2018
 - [Legislation Act 2003](mirror_legislation-act-2003/)
 - Intelligence Services Act 2001
